@@ -8,5 +8,13 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.8.0/dist/decap-cms.js"></script>
+
+  <script id="identity-flow-helper">
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('login', function () {
+        window.location.hash = '';
+      });
+    }
+  </script>
 </body>
 </html>

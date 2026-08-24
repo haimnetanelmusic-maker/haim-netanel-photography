@@ -13,3 +13,6 @@ Haim Netanel Photography - Website V2
 
 פרסום ב-Netlify:
 גררו את כל התיקייה או את קובץ ה-ZIP למסך Production deploys.
+
+
+V6: Added automatic Netlify Identity token redirect from public pages to /admin/ for invite, confirmation and password recovery links.

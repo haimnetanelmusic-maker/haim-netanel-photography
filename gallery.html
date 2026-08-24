@@ -1,4 +1,16 @@
-<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#060606"><title>גלריה | Haim Netanel Photography</title><meta name="description" content="גלריית צילום אירועים של Haim Netanel Photography. חתונות, בריתות, בר ובת מצווה ואירועים."><link rel="stylesheet" href="styles.css"></head><body><header><div class="wrap"><nav>
+<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#060606"><title>גלריה | Haim Netanel Photography</title><meta name="description" content="גלריית צילום אירועים של Haim Netanel Photography. חתונות, בריתות, בר ובת מצווה ואירועים."><link rel="stylesheet" href="styles.css">  <script>
+    // Netlify Identity email links land on the site root with a token in the URL hash.
+    // Forward those links to Decap CMS so the Identity widget can complete invite,
+    // confirmation and password-recovery flows.
+    (function () {
+      var hash = window.location.hash || '';
+      var identityToken = /^#(?:invite_token|confirmation_token|recovery_token|access_token|error)=/i.test(hash);
+      if (identityToken && !window.location.pathname.startsWith('/admin')) {
+        window.location.replace('/admin/' + hash);
+      }
+    })();
+  </script>
+</head><body><header><div class="wrap"><nav>
 <a class="brand" href="index.html"><img src="assets/logo.png" alt="Haim Netanel Photography"><span>HAIM NETANEL PHOTOGRAPHY</span></a>
 <div class="links"><a href="index.html" class="">דף הבית</a><a href="about.html" class="">אודות</a><a href="services.html" class="">שירותים</a><a href="gallery.html" class="active">גלריה</a><a href="areas.html" class="">אזורי שירות</a><a href="reviews.html" class="">המלצות</a><a href="contact.html" class="">יצירת קשר</a></div>
 <a class="nav-cta" href="https://wa.me/972523084940" data-wa-link target="_blank" rel="noopener">WhatsApp</a>
