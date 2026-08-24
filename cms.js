@@ -30,6 +30,15 @@
       el.href='https://wa.me/'+wa+text;
     });
 
+    if (Array.isArray(c.services)) {
+      document.querySelectorAll('.lux-service-item').forEach((el, i) => {
+        const svc = c.services[i]; if (!svc) return;
+        const strong = el.querySelector('strong'); const small = el.querySelector('small');
+        if (strong && svc.title) strong.textContent = svc.title;
+        if (small && svc.subtitle) small.textContent = svc.subtitle;
+      });
+    }
+
     const grid = document.getElementById('homeGalleryGrid');
     if(grid && Array.isArray(c.gallery)){
       grid.innerHTML='';

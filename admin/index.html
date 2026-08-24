@@ -2,22 +2,110 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#070707">
-  <title>מרכז ניהול | Haim Netanel Photography</title>
-  <style>
-    html,body{background:#080808;margin:0} body:before{content:"HN  •  מרכז ניהול האתר";position:fixed;z-index:9999;top:0;right:0;left:0;height:54px;display:flex;align-items:center;padding:0 26px;background:linear-gradient(90deg,#050505,#17120b,#050505);border-bottom:1px solid #8e6b2e;color:#e2bd72;font:700 15px Arial,sans-serif;letter-spacing:.3px;pointer-events:none}
-    body{padding-top:54px}
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <title>HN Studio · מרכז ניהול</title>
+  <link rel="stylesheet" href="/admin/admin.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
-  <script src="https://unpkg.com/decap-cms@^3.8.0/dist/decap-cms.js"></script>
-  <script>
-    window.CMS_MANUAL_INIT = false;
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('login', function () { window.location.hash = ''; });
-    }
-  </script>
-</body>
-</html>
+<div id="loginScreen" class="login-screen">
+  <div class="login-card">
+    <div class="brand-mark">HN</div><div class="brand-name">HAIM NETANEL</div>
+    <h2>מרכז ניהול האתר</h2>
+    <p>ניהול תוכן, תמונות, גלריות ופרטי קשר במקום אחד.</p>
+    <button id="loginBtn" class="primary-btn">כניסה לניהול</button>
+  </div>
+</div>
+<div id="app" class="app">
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-brand"><div class="brand-mark">HN</div><div class="brand-name">STUDIO ADMIN</div><small>מרכז ניהול האתר</small></div>
+    <nav class="nav">
+      <button class="nav-btn active" data-section="dashboard"><span class="nav-icon">◈</span>לוח בקרה</button>
+      <button class="nav-btn" data-section="home"><span class="nav-icon">⌂</span>דף הבית</button>
+      <button class="nav-btn" data-section="gallery"><span class="nav-icon">▣</span>גלריה ותמונות</button>
+      <button class="nav-btn" data-section="about"><span class="nav-icon">◎</span>אודות</button>
+      <button class="nav-btn" data-section="services"><span class="nav-icon">✦</span>שירותים</button>
+      <button class="nav-btn" data-section="areas"><span class="nav-icon">⌖</span>אזורי שירות</button>
+      <button class="nav-btn" data-section="contact"><span class="nav-icon">☎</span>יצירת קשר</button>
+      <button class="nav-btn" data-section="future"><span class="nav-icon">◇</span>אזור לקוחות</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <a class="site-link" href="/" target="_blank">צפייה באתר ↗</a>
+      <button id="logoutBtn" class="logout">התנתקות</button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button id="mobileMenu" class="ghost-btn mobile-menu">☰</button>
+      <h1 id="pageTitle">לוח בקרה</h1>
+      <div class="userbox"><div class="avatar">H</div><span id="userEmail"></span></div>
+    </header>
+    <div class="content">
+      <section id="section-dashboard" class="section active">
+        <div class="welcome"><div><h2>שלום, ברוך הבא למרכז הניהול</h2><p>מכאן מנהלים את האתר בלי לגעת בקוד.</p></div><div class="status">● מחובר ל‑GitHub + Netlify</div></div>
+        <div class="cards">
+          <div class="card" data-open="home"><span class="badge live">פעיל</span><div class="card-icon">⌂</div><h3>דף הבית</h3><p>כותרת ראשית, תמונת פתיחה והטקסט שמקבל את פני הלקוחות.</p></div>
+          <div class="card" data-open="gallery"><span class="badge live">פעיל</span><div class="card-icon">▣</div><h3>גלריה ותמונות</h3><p>הוספת תמונות, שינוי קטגוריות ומחיקה בצורה חזותית.</p></div>
+          <div class="card" data-open="about"><span class="badge live">פעיל</span><div class="card-icon">◎</div><h3>אודות</h3><p>עריכת הטקסט האישי שמופיע בדף הבית.</p></div>
+          <div class="card" data-open="services"><span class="badge live">פעיל</span><div class="card-icon">✦</div><h3>שירותים</h3><p>חתונות, בריתות, בר/בת מצווה וצילום אירועים.</p></div>
+          <div class="card" data-open="contact"><span class="badge live">פעיל</span><div class="card-icon">☎</div><h3>פרטי קשר</h3><p>טלפון, WhatsApp וקישורים שמופיעים באתר.</p></div>
+          <div class="card" data-open="areas"><span class="badge live">פעיל</span><div class="card-icon">⌖</div><h3>אזורי שירות</h3><p>ניהול רשימת הערים והאזורים שבהם אתה עובד.</p></div>
+          <div class="card" data-open="future"><span class="badge">תכנון עתידי</span><div class="card-icon">◇</div><h3>אזור לקוחות</h3><p>בחירת תמונות, סטטוס אלבום ובהמשך עורך אלבומים.</p></div>
+          <div class="card" data-open="future"><span class="badge">תכנון עתידי</span><div class="card-icon">⚙</div><h3>כלים מתקדמים</h3><p>עריכת תמונות, אוטומציות וכלים נוספים בעתיד.</p></div>
+        </div>
+        <div class="quick-stats"><div class="stat"><b id="statGallery">4</b><span>תמונות בדף הבית</span></div><div class="stat"><b>7</b><span>אזורי ניהול</span></div><div class="stat"><b id="statStatus">✓</b><span>סנכרון פעיל</span></div></div>
+      </section>
+
+      <section id="section-home" class="section">
+        <div class="section-head"><div><h2>דף הבית</h2><p>ניהול אזור הפתיחה הראשי.</p></div></div>
+        <div class="panel"><h3 class="panel-title">✦ פתיח ראשי</h3><div class="form-grid">
+          <div class="field"><label>כותרת לבנה</label><input id="heroWhite"></div>
+          <div class="field"><label>כותרת זהב</label><input id="heroGold"></div>
+          <div class="field full"><label>תיאור קצר</label><textarea id="heroDescription"></textarea></div>
+          <div class="field full"><label>תמונת פתיחה</label><div class="image-picker"><img id="heroPreview" class="image-preview"><div><input id="heroImage" type="text" placeholder="/assets/hero.jpg"><br><br><button class="mini-btn" data-upload-target="heroImage">העלאת תמונה חדשה</button></div></div></div>
+        </div></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת שינויים</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
+      </section>
+
+      <section id="section-gallery" class="section">
+        <div class="section-head"><div><h2>גלריה ותמונות</h2><p>הוסף, סדר ומחק תמונות שמופיעות בדף הבית.</p></div><button id="addGallery" class="primary-btn">+ הוספת תמונה</button></div>
+        <div id="galleryList" class="gallery-list"></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת הגלריה</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
+      </section>
+
+      <section id="section-about" class="section">
+        <div class="section-head"><div><h2>אודות</h2><p>הטקסט האישי שמציג אותך ללקוחות.</p></div></div>
+        <div class="panel"><div class="form-grid"><div class="field full"><label>כותרת</label><input id="aboutTitle"></div><div class="field full"><label>טקסט אודות</label><textarea id="aboutText" style="min-height:180px"></textarea></div></div></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת שינויים</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
+      </section>
+
+      <section id="section-services" class="section">
+        <div class="section-head"><div><h2>שירותים</h2><p>ניהול ארבעת השירותים שמופיעים בתחתית תמונת הפתיחה.</p></div></div>
+        <div id="servicesPanel" class="panel"></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת שירותים</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
+      </section>
+
+      <section id="section-areas" class="section">
+        <div class="section-head"><div><h2>אזורי שירות</h2><p>רשימת האזורים בהם אתה נותן שירות.</p></div></div>
+        <div class="panel"><div class="field"><label>ערים ואזורים</label><textarea id="areasText" style="min-height:150px"></textarea></div><p class="note">אפשר להפריד בין ערים באמצעות פסיקים. בהמשך נוכל להפוך את זה לרשימה עם כפתור “הוסף עיר”.</p></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת אזורים</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
+      </section>
+
+      <section id="section-contact" class="section">
+        <div class="section-head"><div><h2>יצירת קשר</h2><p>הפרטים שמפעילים את כפתורי הטלפון וה‑WhatsApp באתר.</p></div></div>
+        <div class="panel"><div class="form-grid"><div class="field"><label>טלפון לתצוגה</label><input id="phoneDisplay" dir="ltr"></div><div class="field"><label>טלפון בינלאומי</label><input id="phoneE164" dir="ltr"></div><div class="field full"><label>מספר WhatsApp</label><input id="whatsapp" dir="ltr"></div></div></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת פרטי קשר</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
+      </section>
+
+      <section id="section-future" class="section">
+        <div class="section-head"><div><h2>אזור לקוחות · תכנון עתידי</h2><p>הבסיס כבר נשמר במבנה הניהול, אבל המודול עצמו ייבנה בשלב נפרד.</p></div></div>
+        <div class="panel"><h3 class="panel-title">◇ החזון למערכת</h3><p class="note">בעתיד נוכל להוסיף כאן כניסה אישית לכל לקוח, גלריה פרטית, בחירת תמונות לאלבום, הערות, סטטוס עבודה ובהמשך עורך אלבומים Drag & Drop וכלי עריכת תמונות בסיסיים. זה יהיה מודול נפרד ומאובטח, ולא יעמיס על ניהול האתר הנוכחי.</p></div>
+      </section>
+    </div>
+  </main>
+</div>
+<input id="hiddenFile" type="file" accept="image/*" hidden>
+<div id="toast" class="toast"></div>
+<script src="/admin/app.js"></script>
+</body></html>
