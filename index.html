@@ -27,7 +27,7 @@
       <a href="contact.html">יצירת קשר</a>
     </div>
 
-    <a class="lux-whatsapp-top" href="https://wa.me/972523084940" target="_blank" rel="noopener">
+    <a class="lux-whatsapp-top" href="https://wa.me/972523084940" data-wa-link data-wa-link target="_blank" rel="noopener">
       <span class="wa-icon">◉</span> דברו איתי ב‑WhatsApp
     </a>
     <button class="menu-btn" aria-label="פתיחת תפריט">☰</button>
@@ -42,13 +42,13 @@
     <div class="lux-hero-content">
       <div class="lux-copy">
         <h1>
-          <span class="hero-white">רגעים אמיתיים.</span>
-          <span class="hero-gold">זיכרונות שנשארים.</span>
+          <span class="hero-white" id="heroTitleWhite">רגעים אמיתיים.</span>
+          <span class="hero-gold" id="heroTitleGold">זיכרונות שנשארים.</span>
         </h1>
         <div class="hero-ornament"><span></span><b>◇</b><span></span></div>
-        <p>צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.</p>
+        <p id="heroDescription">צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.</p>
         <div class="lux-actions">
-          <a class="btn lux-gold" href="https://wa.me/972523084940?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%97%D7%99%D7%99%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%93%D7%95%D7%A7%20%D7%96%D7%9E%D7%99%D7%A0%D7%95%D7%AA%20%D7%9C%D7%90%D7%99%D7%A8%D7%95%D7%A2" target="_blank" rel="noopener">◉ דברו איתי ב‑WhatsApp</a>
+          <a class="btn lux-gold" href="https://wa.me/972523084940" data-wa-link data-wa-link data-wa-text="שלום חיים, אשמח לבדוק זמינות לאירוע" target="_blank" rel="noopener">◉ דברו איתי ב‑WhatsApp</a>
           <a class="btn lux-outline" href="gallery.html">▣ צפו בגלריה</a>
         </div>
       </div>
@@ -88,8 +88,8 @@
           <img src="assets/photographer.jpg" alt="צילום הדמיה של צלם">
           <div class="about-copy">
             <small class="gold">אודות</small>
-            <h2>נעים להכיר</h2>
-            <p>אני חיים נתנאל, צלם אירועים. המטרה שלי היא לתעד את האנשים, האווירה והרגש בצורה נקייה ומקצועית.</p>
+            <h2 id="aboutPreviewTitle">נעים להכיר</h2>
+            <p id="aboutPreviewText">אני חיים נתנאל, צלם אירועים. המטרה שלי היא לתעד את האנשים, האווירה והרגש בצורה נקייה ומקצועית.</p>
             <a class="btn" href="about.html">קראו עוד</a>
           </div>
         </div>
@@ -97,7 +97,7 @@
         <div class="panel gallery-preview">
           <small class="gold">גלריה</small>
           <h2>טעימה מהגלריה</h2>
-          <div class="thumb-grid">
+          <div class="thumb-grid" id="homeGalleryGrid">
             <a class="thumb" href="gallery.html"><img src="assets/wedding.jpg" alt="חתונה"><span>חתונות</span></a>
             <a class="thumb" href="gallery.html"><img src="assets/brit.jpg" alt="ברית"><span>בריתות</span></a>
             <a class="thumb" href="gallery.html"><img src="assets/bar.jpg" alt="בר מצווה"><span>בר/בת מצווה</span></a>
@@ -118,14 +118,14 @@
         </div>
         <div class="actions">
           <a class="btn gold" href="contact.html">בדיקת זמינות</a>
-          <a class="btn" href="tel:+972523084940"><span class="phone-ltr">052-308-4940</span></a>
+          <a class="btn" href="tel:+972523084940" data-phone-link data-phone-link><span class="phone-ltr" data-phone-display><span class="phone-ltr" data-phone-display>052-308-4940</span></span></a>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<a class="floating-wa" href="https://wa.me/972523084940" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+<a class="floating-wa" href="https://wa.me/972523084940" data-wa-link data-wa-link target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
 
 <footer>
   <div class="wrap foot">
@@ -138,5 +138,6 @@
   </div>
 </footer>
 <script src="script.js"></script>
+<script src="cms.js"></script>
 </body>
 </html>

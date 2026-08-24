@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+locale: he
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "site"
+    label: "ניהול האתר"
+    files:
+      - name: "settings"
+        label: "תוכן ותמונות"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - { label: "טלפון להצגה", name: "phone_display", widget: "string" }
+          - { label: "טלפון בינלאומי", name: "phone_e164", widget: "string", hint: "+972..." }
+          - { label: "מספר WhatsApp", name: "whatsapp", widget: "string", hint: "972... ללא +" }
+          - { label: "כותרת לבנה", name: "hero_title_white", widget: "string" }
+          - { label: "כותרת זהב", name: "hero_title_gold", widget: "string" }
+          - { label: "טקסט פתיחה", name: "hero_description", widget: "text" }
+          - { label: "תמונת פתיחה", name: "hero_image", widget: "image" }
+          - { label: "כותרת אודות קצרה", name: "about_title", widget: "string" }
+          - { label: "טקסט אודות קצר", name: "about_text", widget: "text" }
+          - label: "תמונות גלריה בדף הבית"
+            name: "gallery"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "כותרת", name: "title", widget: "string" }
+              - { label: "תמונה", name: "image", widget: "image" }
+              - { label: "תיאור לתמונה", name: "alt", widget: "string", required: false }
+          - { label: "אזורי שירות", name: "areas", widget: "text" }
