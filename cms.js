@@ -7,21 +7,22 @@
     const byId = id => document.getElementById(id);
     const setText = (id, val) => { const el=byId(id); if(el && val!=null) el.textContent=val; };
 
-    setText('heroTitleWhite', c.hero_title_white);
-    setText('heroTitleGold', c.hero_title_gold);
-    setText('heroDescription', c.hero_description);
-    setText('aboutPreviewTitle', c.about_title);
-    setText('aboutPreviewText', c.about_text);
+    setText('heroTitleWhite', c.hero?.title_white || c.hero_title_white);
+    setText('heroTitleGold', c.hero?.title_gold || c.hero_title_gold);
+    setText('heroDescription', c.hero?.description || c.hero_description);
+    setText('aboutPreviewTitle', c.about?.title || c.about_title);
+    setText('aboutPreviewText', c.about?.text || c.about_text);
     setText('areasText', c.areas);
 
-    if(c.hero_image){
+    const heroImage = c.hero?.image || c.hero_image;
+    if(heroImage){
       const photo = document.querySelector('.lux-hero-photo');
-      if(photo) photo.style.backgroundImage = `url("${c.hero_image}")`;
+      if(photo) photo.style.backgroundImage = `url("${heroImage}")`;
     }
 
-    const phoneDisplay = c.phone_display || '052-308-4940';
-    const phoneE164 = c.phone_e164 || '+972523084940';
-    const wa = c.whatsapp || '972523084940';
+    const phoneDisplay = c.contact?.phone_display || c.phone_display || '052-308-4940';
+    const phoneE164 = c.contact?.phone_e164 || c.phone_e164 || '+972523084940';
+    const wa = c.contact?.whatsapp || c.whatsapp || '972523084940';
     document.querySelectorAll('[data-phone-display]').forEach(el=>el.textContent=phoneDisplay);
     document.querySelectorAll('a[data-phone-link]').forEach(el=>el.href='tel:'+phoneE164);
     document.querySelectorAll('a[data-wa-link]').forEach(el=>{

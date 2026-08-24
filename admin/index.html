@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ניהול האתר | Haim Netanel Photography</title>
+  <meta name="theme-color" content="#070707">
+  <title>מרכז ניהול | Haim Netanel Photography</title>
+  <style>
+    html,body{background:#080808;margin:0} body:before{content:"HN  •  מרכז ניהול האתר";position:fixed;z-index:9999;top:0;right:0;left:0;height:54px;display:flex;align-items:center;padding:0 26px;background:linear-gradient(90deg,#050505,#17120b,#050505);border-bottom:1px solid #8e6b2e;color:#e2bd72;font:700 15px Arial,sans-serif;letter-spacing:.3px;pointer-events:none}
+    body{padding-top:54px}
+  </style>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.8.0/dist/decap-cms.js"></script>
-
-  <script id="identity-flow-helper">
+  <script>
+    window.CMS_MANUAL_INIT = false;
     if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('login', function () {
-        window.location.hash = '';
-      });
+      window.netlifyIdentity.on('login', function () { window.location.hash = ''; });
     }
   </script>
 </body>
