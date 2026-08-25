@@ -1,3 +1,4 @@
+:root{--hn-gold:#d6ad55;--hn-text:#f6f1e7;--hn-bg:#080808;--hn-panel:#111111}
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 :root{
   --bg:#060606;--bg2:#0a0a0a;--panel:#101010;--panel2:#151515;
@@ -69,3 +70,6 @@ footer{border-top:1px solid var(--line);padding:32px 0;background:#050505}.foot{
 @media(max-width:640px){
   .lux-nav-wrap{height:70px}.lux-logo{transform:scale(.68);margin-left:-18px}.lux-links.open{top:70px}.lux-hero{min-height:820px}.lux-hero-content{height:600px;padding:90px 4vw 170px}.hero-white,.hero-gold{font-size:clamp(42px,12vw,58px)}.lux-copy p{font-size:16px}.lux-actions{gap:10px}.lux-actions .btn{width:100%;min-width:0;font-size:15px}.lux-service-bar{grid-template-columns:1fr 1fr;bottom:14px}.lux-service-item{gap:10px}.lux-service-icon{font-size:28px}.lux-service-item strong{font-size:15px}.lux-service-item small{font-size:11px}.home-preview-section{padding-top:70px}
 }
+
+/* HN Admin Studio dynamic theme hooks */
+body{color:var(--hn-text)} .hero-gold,.gold{color:var(--hn-gold)!important} .panel{background-color:var(--hn-panel)}

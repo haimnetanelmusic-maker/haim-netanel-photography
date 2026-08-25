@@ -28,9 +28,12 @@
       <button class="nav-btn" data-section="services"><span class="nav-icon">✦</span>שירותים</button>
       <button class="nav-btn" data-section="areas"><span class="nav-icon">⌖</span>אזורי שירות</button>
       <button class="nav-btn" data-section="contact"><span class="nav-icon">☎</span>יצירת קשר</button>
+      <button class="nav-btn" data-section="design"><span class="nav-icon">Aa</span>עיצוב האתר</button>
+      <button class="nav-btn" data-section="seo"><span class="nav-icon">⌕</span>SEO ונתונים</button>
+      <button class="nav-btn" data-section="activity"><span class="nav-icon">↻</span>פעילות אחרונה</button>
       <button class="nav-btn" data-section="future"><span class="nav-icon">◇</span>אזור לקוחות</button>
     </nav>
-    <div class="sidebar-bottom">
+    <div class="sidebar-bottom"><button id="quickAdd" class="primary-btn">+ הוספה מהירה</button>
       <a class="site-link" href="/" target="_blank">צפייה באתר ↗</a>
       <button id="logoutBtn" class="logout">התנתקות</button>
     </div>
@@ -54,7 +57,7 @@
           <div class="card" data-open="future"><span class="badge">תכנון עתידי</span><div class="card-icon">◇</div><h3>אזור לקוחות</h3><p>בחירת תמונות, סטטוס אלבום ובהמשך עורך אלבומים.</p></div>
           <div class="card" data-open="future"><span class="badge">תכנון עתידי</span><div class="card-icon">⚙</div><h3>כלים מתקדמים</h3><p>עריכת תמונות, אוטומציות וכלים נוספים בעתיד.</p></div>
         </div>
-        <div class="quick-stats"><div class="stat"><b id="statGallery">4</b><span>תמונות בדף הבית</span></div><div class="stat"><b>7</b><span>אזורי ניהול</span></div><div class="stat"><b id="statStatus">✓</b><span>סנכרון פעיל</span></div></div>
+        <div class="quick-stats"><div class="stat"><b id="statGallery">4</b><span>סה״כ תמונות</span></div><div class="stat"><b id="statCategories">4</b><span>קטגוריות גלריה</span></div><div class="stat"><b id="statUpdated">—</b><span>עדכון אחרון</span></div><div class="stat"><b id="statStatus">✓</b><span>סטטוס אתר</span></div></div><div class="panel activity-home"><h3 class="panel-title">↻ פעילות אחרונה</h3><div id="dashboardActivity" class="activity-list"></div></div>
       </section>
 
       <section id="section-home" class="section">
@@ -69,8 +72,9 @@
       </section>
 
       <section id="section-gallery" class="section">
-        <div class="section-head"><div><h2>גלריה ותמונות</h2><p>הוסף, סדר ומחק תמונות שמופיעות בדף הבית.</p></div><button id="addGallery" class="primary-btn">+ הוספת תמונה</button></div>
-        <div id="galleryList" class="gallery-list"></div>
+        <div class="section-head"><div><h2>גלריה ותמונות</h2><p>מנהל מדיה: קטגוריות, Cover, סדר, מסגרות ועריכת מראה.</p></div><div class="head-actions"><button id="addCategory" class="ghost-btn">+ קטגוריה</button><button id="addGallery" class="primary-btn">+ העלאת תמונה</button></div></div>
+        <div class="gallery-toolbar"><div id="categoryFilters" class="filter-pills"></div><select id="galleryCategoryFilter"><option value="all">כל הקטגוריות</option></select></div>
+        <div id="galleryList" class="gallery-list studio-grid"></div>
         <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת הגלריה</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
       </section>
 
@@ -98,6 +102,36 @@
         <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת פרטי קשר</button><button class="ghost-btn reload-btn">ביטול שינויים</button></div></div>
       </section>
 
+
+      <section id="section-design" class="section">
+        <div class="section-head"><div><h2>עיצוב האתר</h2><p>פונטים, צבעים, מרווחים וסגנונות — כמו סטודיו קטן.</p></div><button id="openPreview" class="ghost-btn">תצוגה מקדימה ↗</button></div>
+        <div class="panel"><h3 class="panel-title">Aa טיפוגרפיה וצבעים</h3><div class="form-grid">
+          <div class="field"><label>פונט ראשי</label><select id="bodyFont"><option>Arial</option><option>Georgia</option><option>Tahoma</option><option>Verdana</option><option>Trebuchet MS</option></select></div>
+          <div class="field"><label>פונט כותרות</label><select id="headingFont"><option>Georgia</option><option>Arial</option><option>Tahoma</option><option>Trebuchet MS</option></select></div>
+          <div class="field"><label>צבע טקסט</label><input id="textColor" type="color"></div><div class="field"><label>צבע זהב / הדגשה</label><input id="goldColor" type="color"></div>
+          <div class="field"><label>צבע רקע</label><input id="backgroundColor" type="color"></div><div class="field"><label>צבע כרטיסים</label><input id="panelColor" type="color"></div>
+          <div class="field"><label>עיגול כפתורים <span id="radiusVal"></span></label><input id="buttonRadius" type="range" min="0" max="40"></div><div class="field"><label>מרווח בין אזורים <span id="spacingVal"></span></label><input id="sectionSpacing" type="range" min="30" max="140"></div>
+        </div></div>
+        <div class="panel"><h3 class="panel-title">✦ כותרת הפתיחה</h3><div class="form-grid">
+          <div class="field"><label>פונט “רגעים אמיתיים”</label><select id="heroWhiteFont"><option>Arial</option><option>Georgia</option><option>Tahoma</option><option>Trebuchet MS</option></select></div><div class="field"><label>צבע</label><input id="heroWhiteColor" type="color"></div>
+          <div class="field"><label>גודל <span id="heroWhiteSizeVal"></span></label><input id="heroWhiteSize" type="range" min="32" max="100"></div><div class="field"><label>עובי</label><select id="heroWhiteWeight"><option value="400">רגיל</option><option value="600">בינוני</option><option value="700">מודגש</option><option value="800">כבד</option></select></div>
+          <div class="field"><label>פונט “זיכרונות שנשארים”</label><select id="heroGoldFont"><option>Georgia</option><option>Arial</option><option>Tahoma</option><option>Trebuchet MS</option></select></div><div class="field"><label>צבע</label><input id="heroGoldColor" type="color"></div>
+          <div class="field"><label>גודל <span id="heroGoldSizeVal"></span></label><input id="heroGoldSize" type="range" min="32" max="100"></div><div class="field"><label>עובי</label><select id="heroGoldWeight"><option value="400">רגיל</option><option value="600">בינוני</option><option value="700">מודגש</option><option value="800">כבד</option></select></div>
+        </div></div>
+        <div class="panel"><h3 class="panel-title">▤ דפים ואזורים</h3><div id="pageControls" class="page-controls"></div></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת העיצוב</button><button id="resetTheme" class="ghost-btn">איפוס Theme</button></div></div>
+      </section>
+
+      <section id="section-seo" class="section">
+        <div class="section-head"><div><h2>SEO ונתונים</h2><p>הכנה לגוגל ומקום לחיבור Analytics אמיתי.</p></div></div>
+        <div class="panel"><h3 class="panel-title">⌕ SEO · דף הבית</h3><div class="form-grid"><div class="field full"><label>כותרת Google</label><input id="seoHomeTitle"></div><div class="field full"><label>תיאור Google</label><textarea id="seoHomeDescription"></textarea></div><div class="field full"><label>תמונת שיתוף</label><input id="seoHomeOg"></div></div></div>
+        <div class="panel"><h3 class="panel-title">▣ SEO · גלריה</h3><div class="form-grid"><div class="field full"><label>כותרת Google</label><input id="seoGalleryTitle"></div><div class="field full"><label>תיאור Google</label><textarea id="seoGalleryDescription"></textarea></div></div></div>
+        <div class="analytics-placeholder"><b>נתוני מבקרים</b><span>עדיין לא מחובר Analytics — לא מוצגים מספרים מומצאים. כשנחבר אחסון/Analytics, כאן יוצגו צפיות היום, מבקרים, עמודים מובילים ו‑Real‑Time.</span></div>
+        <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמירת SEO</button></div></div>
+      </section>
+
+      <section id="section-activity" class="section"><div class="section-head"><div><h2>פעילות אחרונה</h2><p>שינויים שבוצעו דרך HN Admin Studio.</p></div></div><div class="panel"><div id="activityList" class="activity-list"></div></div></section>
+
       <section id="section-future" class="section">
         <div class="section-head"><div><h2>אזור לקוחות · תכנון עתידי</h2><p>הבסיס כבר נשמר במבנה הניהול, אבל המודול עצמו ייבנה בשלב נפרד.</p></div></div>
         <div class="panel"><h3 class="panel-title">◇ החזון למערכת</h3><p class="note">בעתיד נוכל להוסיף כאן כניסה אישית לכל לקוח, גלריה פרטית, בחירת תמונות לאלבום, הערות, סטטוס עבודה ובהמשך עורך אלבומים Drag & Drop וכלי עריכת תמונות בסיסיים. זה יהיה מודול נפרד ומאובטח, ולא יעמיס על ניהול האתר הנוכחי.</p></div>
@@ -105,7 +139,9 @@
     </div>
   </main>
 </div>
-<input id="hiddenFile" type="file" accept="image/*" hidden>
+<input id="hiddenFile" type="file" accept="image/*" multiple hidden>
+<div id="imageEditor" class="modal"><div class="modal-card"><button id="closeImageEditor" class="modal-close">×</button><h2>עריכת תמונה</h2><div class="image-editor-layout"><div class="editor-preview-wrap"><img id="editorPreview"></div><div class="editor-controls"><div class="field"><label>קטגוריה</label><select id="editCategory"></select></div><div class="field"><label>כותרת</label><input id="editTitle"></div><div class="field"><label>Alt ל‑SEO</label><input id="editAlt"></div><label class="check"><input id="editCover" type="checkbox"> תמונת Cover</label><div class="field"><label>מסגרת</label><div class="inline"><input id="editBorderColor" type="color"><input id="editBorderWidth" type="range" min="0" max="16"></div></div><div class="field"><label>פינות</label><input id="editRadius" type="range" min="0" max="60"></div><div class="field"><label>צל</label><input id="editShadow" type="range" min="0" max="50"></div><div class="field"><label>בהירות</label><input id="editBrightness" type="range" min="50" max="150"></div><div class="field"><label>קונטרסט</label><input id="editContrast" type="range" min="50" max="150"></div><div class="field"><label>רוויה</label><input id="editSaturation" type="range" min="0" max="180"></div><div class="field"><label>שחור לבן</label><input id="editGrayscale" type="range" min="0" max="100"></div><div class="field"><label>זום</label><input id="editZoom" type="range" min="100" max="160"></div><button id="applyImageEdit" class="primary-btn">החלת השינויים</button></div></div></div></div>
+<div id="quickModal" class="modal"><div class="modal-card small"><button id="closeQuick" class="modal-close">×</button><h2>הוספה מהירה</h2><div class="quick-actions"><button data-quick="upload" class="primary-btn">העלאת תמונות</button><button data-quick="category" class="ghost-btn">קטגוריה חדשה</button><button data-quick="home" class="ghost-btn">עריכת דף הבית</button></div></div></div>
 <div id="toast" class="toast"></div>
 <script src="/admin/app.js"></script>
 </body></html>
