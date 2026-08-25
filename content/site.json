@@ -133,7 +133,7 @@
       "letterSpacing": 0
     },
     "heroGold": {
-      "font": "Georgia",
+      "font": "Tahoma",
       "size": 64,
       "weight": 700,
       "color": "#d6ad55",
@@ -192,6 +192,10 @@
     "note": "חיבור נתוני מבקרים יוגדר בהמשך"
   },
   "activity": [
+    {
+      "text": "תוכן האתר עודכן דרך HN Admin Studio",
+      "time": "2026-08-25T00:39:08.342Z"
+    },
     {
       "text": "תוכן האתר עודכן דרך HN Admin Studio",
       "time": "2026-08-25T00:28:58.016Z"
