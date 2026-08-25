@@ -4,11 +4,12 @@
     "title_gold": "זיכרונות שנשארים.",
     "description": "צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.",
     "image": "/assets/hero.webp",
-    "mode": "carousel",
+    "mode": "cinematic",
     "slides": [
       "/assets/hero.webp",
       "/assets/wedding.webp",
-      "/assets/events.webp"
+      "/assets/events.webp",
+      "/assets/brit.webp"
     ]
   },
   "about": {
@@ -145,20 +146,20 @@
   },
   "typography": {
     "heroWhite": {
-      "font": "Arial",
-      "size": 64,
-      "weight": 700,
+      "font": "Gveret Levin AlefAlefAlef",
+      "size": 70,
+      "weight": 400,
       "color": "#ffffff",
       "letterSpacing": 0,
-      "lineHeight": 1.15
+      "lineHeight": 1.05
     },
     "heroGold": {
-      "font": "Georgia",
-      "size": 64,
-      "weight": 700,
+      "font": "Gveret Levin AlefAlefAlef",
+      "size": 76,
+      "weight": 400,
       "color": "#d6ad55",
       "letterSpacing": 0,
-      "lineHeight": 1.15
+      "lineHeight": 1.05
     },
     "body": {
       "font": "Arial",
