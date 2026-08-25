@@ -1,20 +1,200 @@
 {
-  "hero": {"title_white":"רגעים אמיתיים.","title_gold":"זיכרונות שנשארים.","description":"צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.","image":"/assets/hero.jpg"},
-  "about": {"title":"נעים להכיר","text":"אני חיים נתנאל, צלם אירועים. המטרה שלי היא לתעד את האנשים, האווירה והרגש בצורה נקייה ומקצועית."},
+  "hero": {
+    "title_white": "רגעים אמיתיים.",
+    "title_gold": "זיכרונות שנשארים.",
+    "description": "צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.",
+    "image": "/assets/hero.jpg"
+  },
+  "about": {
+    "title": "נעים להכיר",
+    "text": "אני חיים נתנאל, צלם אירועים. המטרה שלי היא לתעד את האנשים, האווירה והרגש בצורה נקייה ומקצועית."
+  },
   "gallery": [
-    {"title":"חתונות","category":"חתונות","image":"/assets/wedding.jpg","alt":"חתונה","cover":true,"style":{"borderColor":"#d6ad55","borderWidth":0,"radius":12,"shadow":12,"brightness":100,"contrast":100,"saturation":100,"grayscale":0,"zoom":100}},
-    {"title":"בריתות","category":"בריתות","image":"/assets/brit.jpg","alt":"ברית","cover":false,"style":{"borderColor":"#d6ad55","borderWidth":0,"radius":12,"shadow":12,"brightness":100,"contrast":100,"saturation":100,"grayscale":0,"zoom":100}},
-    {"title":"בר/בת מצווה","category":"בר/בת מצווה","image":"/assets/bar.jpg","alt":"בר מצווה","cover":false,"style":{"borderColor":"#d6ad55","borderWidth":0,"radius":12,"shadow":12,"brightness":100,"contrast":100,"saturation":100,"grayscale":0,"zoom":100}},
-    {"title":"אירועים","category":"אירועים","image":"/assets/events.jpg","alt":"אירוע","cover":false,"style":{"borderColor":"#d6ad55","borderWidth":0,"radius":12,"shadow":12,"brightness":100,"contrast":100,"saturation":100,"grayscale":0,"zoom":100}}
+    {
+      "title": "בריתות",
+      "category": "בריתות",
+      "image": "/assets/brit.jpg",
+      "alt": "ברית",
+      "cover": false,
+      "style": {
+        "borderColor": "#d6ad55",
+        "borderWidth": 0,
+        "radius": 12,
+        "shadow": 12,
+        "brightness": 100,
+        "contrast": 100,
+        "saturation": 100,
+        "grayscale": 0,
+        "zoom": 100
+      }
+    },
+    {
+      "title": "בר/בת מצווה",
+      "category": "בר/בת מצווה",
+      "image": "/assets/bar.jpg",
+      "alt": "בר מצווה",
+      "cover": false,
+      "style": {
+        "borderColor": "#d6ad55",
+        "borderWidth": 0,
+        "radius": 12,
+        "shadow": 12,
+        "brightness": 100,
+        "contrast": 100,
+        "saturation": 100,
+        "grayscale": 0,
+        "zoom": 100
+      }
+    },
+    {
+      "title": "חתונות",
+      "category": "חתונות",
+      "image": "/assets/wedding.jpg",
+      "alt": "חתונה",
+      "cover": true,
+      "style": {
+        "borderColor": "#d6ad55",
+        "borderWidth": 0,
+        "radius": 12,
+        "shadow": 12,
+        "brightness": 100,
+        "contrast": 100,
+        "saturation": 100,
+        "grayscale": 0,
+        "zoom": 100
+      }
+    },
+    {
+      "title": "אירועים",
+      "category": "אירועים",
+      "image": "/assets/events.jpg",
+      "alt": "אירוע",
+      "cover": false,
+      "style": {
+        "borderColor": "#d6ad55",
+        "borderWidth": 0,
+        "radius": 12,
+        "shadow": 12,
+        "brightness": 100,
+        "contrast": 100,
+        "saturation": 100,
+        "grayscale": 0,
+        "zoom": 100
+      }
+    }
   ],
-  "categories":["חתונות","בריתות","בר/בת מצווה","אירועים"],
-  "contact":{"phone_display":"052-308-4940","phone_e164":"+972523084940","whatsapp":"972523084940"},
-  "areas":"נתיבות, באר שבע, אופקים, שדרות, אשקלון, אשדוד, קריית גת והסביבה",
-  "services":[{"title":"צילום אירועים","subtitle":"ברמה גבוהה"},{"title":"חתונות","subtitle":"תיעוד רגעים מרגשים"},{"title":"בר/בת מצווה","subtitle":"שמחה בכל פריים"},{"title":"בריתות","subtitle":"תיעוד באהבה"}],
-  "theme":{"bodyFont":"Arial","headingFont":"Georgia","textColor":"#f6f1e7","mutedColor":"#bdb5a7","goldColor":"#d6ad55","backgroundColor":"#080808","panelColor":"#111111","buttonRadius":12,"sectionSpacing":72},
-  "typography":{"heroWhite":{"font":"Arial","size":64,"weight":700,"color":"#ffffff","letterSpacing":0},"heroGold":{"font":"Georgia","size":64,"weight":700,"color":"#d6ad55","letterSpacing":0},"body":{"font":"Arial","size":16,"weight":400,"color":"#f6f1e7","letterSpacing":0}},
-  "pages":{"home":{"enabled":true,"sections":["hero","preview","cta"]},"about":{"enabled":true},"services":{"enabled":true},"gallery":{"enabled":true},"areas":{"enabled":true},"reviews":{"enabled":true},"contact":{"enabled":true}},
-  "seo":{"home":{"title":"Haim Netanel Photography | צלם אירועים בנתיבות והדרום","description":"צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום.","ogImage":"/assets/hero.jpg"},"gallery":{"title":"גלריית צילום אירועים | Haim Netanel Photography","description":"גלריית חתונות, בריתות, בר ובת מצווה ואירועים.","ogImage":"/assets/wedding.jpg"}},
-  "analytics":{"provider":"none","note":"חיבור נתוני מבקרים יוגדר בהמשך"},
-  "activity":[]
+  "categories": [
+    "חתונות",
+    "בריתות",
+    "בר/בת מצווה",
+    "אירועים"
+  ],
+  "contact": {
+    "phone_display": "052-308-4940",
+    "phone_e164": "+972523084940",
+    "whatsapp": "972523084940"
+  },
+  "areas": "נתיבות, באר שבע, אופקים, שדרות, אשקלון, אשדוד, קריית גת והסביבה",
+  "services": [
+    {
+      "title": "צילום אירועים",
+      "subtitle": "ברמה גבוהה"
+    },
+    {
+      "title": "חתונות",
+      "subtitle": "תיעוד רגעים מרגשים"
+    },
+    {
+      "title": "בר/בת מצווה",
+      "subtitle": "שמחה בכל פריים"
+    },
+    {
+      "title": "בריתות",
+      "subtitle": "תיעוד באהבה"
+    }
+  ],
+  "theme": {
+    "bodyFont": "Arial",
+    "headingFont": "Georgia",
+    "textColor": "#f6f1e7",
+    "mutedColor": "#bdb5a7",
+    "goldColor": "#d6ad55",
+    "backgroundColor": "#080808",
+    "panelColor": "#111111",
+    "buttonRadius": 12,
+    "sectionSpacing": 72
+  },
+  "typography": {
+    "heroWhite": {
+      "font": "Arial",
+      "size": 64,
+      "weight": 700,
+      "color": "#ffffff",
+      "letterSpacing": 0
+    },
+    "heroGold": {
+      "font": "Georgia",
+      "size": 64,
+      "weight": 700,
+      "color": "#d6ad55",
+      "letterSpacing": 0
+    },
+    "body": {
+      "font": "Arial",
+      "size": 16,
+      "weight": 400,
+      "color": "#f6f1e7",
+      "letterSpacing": 0
+    }
+  },
+  "pages": {
+    "home": {
+      "enabled": true,
+      "sections": [
+        "hero",
+        "preview",
+        "cta"
+      ]
+    },
+    "about": {
+      "enabled": true
+    },
+    "services": {
+      "enabled": true
+    },
+    "gallery": {
+      "enabled": true
+    },
+    "areas": {
+      "enabled": true
+    },
+    "reviews": {
+      "enabled": true
+    },
+    "contact": {
+      "enabled": true
+    }
+  },
+  "seo": {
+    "home": {
+      "title": "Haim Netanel Photography | צלם אירועים בנתיבות והדרום",
+      "description": "צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום.",
+      "ogImage": "/assets/hero.jpg"
+    },
+    "gallery": {
+      "title": "גלריית צילום אירועים | Haim Netanel Photography",
+      "description": "גלריית חתונות, בריתות, בר ובת מצווה ואירועים.",
+      "ogImage": "/assets/wedding.jpg"
+    }
+  },
+  "analytics": {
+    "provider": "none",
+    "note": "חיבור נתוני מבקרים יוגדר בהמשך"
+  },
+  "activity": [
+    {
+      "text": "תוכן האתר עודכן דרך HN Admin Studio",
+      "time": "2026-08-25T00:28:58.016Z"
+    }
+  ]
 }
