@@ -1,18 +1,18 @@
-Haim Netanel Photography - Website V2
+Haim Netanel Photography — V13.1 Final Release Candidate
 
-גרסה 2 כוללת:
-- דף בית יוקרתי שחור/זהב עם Hero ותמונת הדמיה.
-- עמודים נפרדים: אודות, שירותים, גלריה, אזורי שירות, המלצות, יצירת קשר.
-- מספר הטלפון מוצג בכיוון LTR תקין.
-- WhatsApp צף בכל העמודים.
-- התאמה למובייל ותפריט מובייל.
-- SEO בסיסי לכל עמוד.
-- אין פייסבוק/אינסטגרם.
-- אין מספרי לקוחות/אירועים מומצאים.
-- תמונות האתר הן תמונות הדמיה בלבד וצריכות להיות מוחלפות בהמשך בתמונות מאושרות.
+Current release:
+- Public photography website + HN Studio Admin
+- Responsive black/gold design
+- Gallery, About, Services, Service Areas, Reviews and Contact
+- Admin-managed content, gallery and design controls
+- Dynamic font selection with optimized public loading
+- WebP image optimization and lazy loading
+- SEO foundation: canonical/OG metadata, robots.txt, sitemap.xml and structured data
+- Netlify headers and redirects
+- Home gallery featured-image controls
+- Lightweight Hero options
+- Real photographer image installed and optimized
 
-פרסום ב-Netlify:
-גררו את כל התיקייה או את קובץ ה-ZIP למסך Production deploys.
+Release flow: GitHub -> Netlify production deploy.
 
-
-V6: Added automatic Netlify Identity token redirect from public pages to /admin/ for invite, confirmation and password recovery links.
+Version: V13.1 Final RC

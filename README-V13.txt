@@ -14,5 +14,5 @@ Changes:
 - Home reviews section prepared for real reviews only
 - Existing V12 security/SEO files preserved
 
-IMPORTANT: photographer.jpg remains a placeholder until a real photo is uploaded in Admin > About.
+V13.1: Real photographer image installed and optimized as assets/photographer.webp, with JPEG fallback retained. Public alt text updated to: חיים נתנאל – צלם אירועים.
 Review schema was NOT fabricated; add only when real review data exists.
