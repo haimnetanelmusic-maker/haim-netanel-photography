@@ -6,6 +6,8 @@
   <meta name="theme-color" content="#050505">
   <title>Haim Netanel Photography | צלם אירועים בנתיבות והדרום</title>
   <meta name="description" content="צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום. Haim Netanel Photography.">
+  <link rel="icon" type="image/png" href="/assets/logo.webp">
+  <link rel="preload" as="image" href="/assets/hero.jpg" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script>
     // Netlify Identity email links land on the site root with a token in the URL hash.
@@ -19,6 +21,17 @@
       }
     })();
   </script>
+
+  <link rel="canonical" href="https://haim-netanel-photography.netlify.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:title" content="Haim Netanel Photography | צלם אירועים בנתיבות והדרום">
+  <meta property="og:description" content="צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום.">
+  <meta property="og:url" content="https://haim-netanel-photography.netlify.app/">
+  <meta property="og:image" content="https://haim-netanel-photography.netlify.app/assets/hero.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Haim Netanel Photography","url":"https://haim-netanel-photography.netlify.app/","image":"https://haim-netanel-photography.netlify.app/assets/hero.jpg","logo":"https://haim-netanel-photography.netlify.app/assets/logo.webp","telephone":"+972523084940","areaServed":["נתיבות","באר שבע","דרום ישראל"],"knowsAbout":["צילום אירועים","צילום חתונות","צילום בריתות","צילום בר מצווה","צילום בת מצווה"]}</script>
 </head>
 <body class="home-page">
 <header class="lux-header">
@@ -30,25 +43,25 @@
     </a>
 
     <div class="links lux-links">
-      <a href="index.html" class="active">דף הבית</a>
+      <a href="index.html" class="active">דף הבית</a><a href="gallery.html">גלריה</a>
       <a href="about.html">אודות</a>
       <a href="services.html">שירותים</a>
-      <a href="gallery.html">גלריה</a>
+      
       <a href="areas.html">אזורי שירות</a>
       <a href="reviews.html">המלצות</a>
       <a href="contact.html">יצירת קשר</a>
     </div>
 
-    <a class="lux-whatsapp-top" href="https://wa.me/972523084940" data-wa-link data-wa-link target="_blank" rel="noopener">
+    <a class="lux-whatsapp-top" href="https://wa.me/972523084940" data-wa-link target="_blank" rel="noopener">
       <span class="wa-icon">◉</span> דברו איתי ב‑WhatsApp
     </a>
-    <button class="menu-btn" aria-label="פתיחת תפריט">☰</button>
+    <button class="menu-btn" aria-label="פתיחת תפריט" aria-expanded="false">☰</button>
   </div>
 </header>
 
 <main>
   <section class="lux-hero">
-    <div class="lux-hero-photo" aria-hidden="true"></div>
+    <div class="lux-hero-photo" aria-hidden="true"><div class="hero-slide active" style="background-image:url('/assets/hero.webp')"></div></div>
     <div class="lux-hero-shade" aria-hidden="true"></div>
 
     <div class="lux-hero-content">
@@ -60,7 +73,7 @@
         <div class="hero-ornament"><span></span><b>◇</b><span></span></div>
         <p id="heroDescription">צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.</p>
         <div class="lux-actions">
-          <a class="btn lux-gold" href="https://wa.me/972523084940" data-wa-link data-wa-link data-wa-text="שלום חיים, אשמח לבדוק זמינות לאירוע" target="_blank" rel="noopener">◉ דברו איתי ב‑WhatsApp</a>
+          <a class="btn lux-gold" href="https://wa.me/972523084940" data-wa-link data-wa-text="שלום חיים, אשמח לבדוק זמינות לאירוע" target="_blank" rel="noopener">◉ דברו איתי ב‑WhatsApp</a>
           <a class="btn lux-outline" href="gallery.html">▣ צפו בגלריה</a>
         </div>
       </div>
@@ -68,7 +81,7 @@
 
     <div class="lux-service-bar">
       <a href="services.html#events" class="lux-service-item">
-        <span class="lux-service-icon">◎</span>
+        <span class="lux-service-icon">▣</span>
         <span><strong>צילום אירועים</strong><small>ברמה גבוהה</small></span>
       </a>
       <a href="services.html#weddings" class="lux-service-item">
@@ -97,7 +110,7 @@
 
       <div class="preview-grid">
         <div class="panel about-preview">
-          <img src="assets/photographer.jpg" alt="צילום הדמיה של צלם">
+          <img loading="lazy" id="aboutPreviewImage" src="assets/photographer.jpg" alt="תמונת הצלם תעודכן בקרוב">
           <div class="about-copy">
             <small class="gold">אודות</small>
             <h2 id="aboutPreviewTitle">נעים להכיר</h2>
@@ -110,15 +123,19 @@
           <small class="gold">גלריה</small>
           <h2>טעימה מהגלריה</h2>
           <div class="thumb-grid" id="homeGalleryGrid">
-            <a class="thumb" href="gallery.html"><img src="assets/wedding.jpg" alt="חתונה"><span>חתונות</span></a>
-            <a class="thumb" href="gallery.html"><img src="assets/brit.jpg" alt="ברית"><span>בריתות</span></a>
-            <a class="thumb" href="gallery.html"><img src="assets/bar.jpg" alt="בר מצווה"><span>בר/בת מצווה</span></a>
-            <a class="thumb" href="gallery.html"><img src="assets/events.jpg" alt="אירוע"><span>אירועים</span></a>
+            <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/wedding.webp" alt="חתונה"><span>חתונות</span></a>
+            <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/brit.webp" alt="ברית"><span>בריתות</span></a>
+            <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/bar.webp" alt="בר מצווה"><span>בר/בת מצווה</span></a>
+            <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/events.webp" alt="אירוע"><span>אירועים</span></a>
           </div>
           <div class="actions"><a class="btn" href="gallery.html">לכל הגלריה</a></div>
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="home-reviews" id="home-reviews">
+    <div class="wrap"><div class="home-intro-title"><small>לקוחות מספרים</small><h2>המלצות</h2><p>כאן יוצגו רק המלצות אמיתיות שתבחר לפרסם.</p></div><div id="homeReviewsGrid" class="home-reviews-grid"></div><div class="actions" style="justify-content:center"><a class="btn" href="reviews.html">לכל ההמלצות</a></div></div>
   </section>
 
   <section class="home-cta-section">
@@ -130,14 +147,14 @@
         </div>
         <div class="actions">
           <a class="btn gold" href="contact.html">בדיקת זמינות</a>
-          <a class="btn" href="tel:+972523084940" data-phone-link data-phone-link><span class="phone-ltr" data-phone-display><span class="phone-ltr" data-phone-display>052-308-4940</span></span></a>
+          <a class="btn" href="tel:+972523084940" data-phone-link><span class="phone-ltr" data-phone-display>052-308-4940</span></a>
         </div>
       </div>
     </div>
   </section>
 </main>
 
-<a class="floating-wa" href="https://wa.me/972523084940" data-wa-link data-wa-link target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+<a class="floating-wa" href="https://wa.me/972523084940" data-wa-link target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
 
 <footer>
   <div class="wrap foot">
