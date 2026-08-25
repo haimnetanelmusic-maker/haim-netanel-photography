@@ -11,6 +11,24 @@
   },
   "gallery": [
     {
+      "title": "חתונות",
+      "category": "חתונות",
+      "image": "/assets/wedding.jpg",
+      "alt": "חתונה",
+      "cover": true,
+      "style": {
+        "borderColor": "#d6ad55",
+        "borderWidth": 0,
+        "radius": 12,
+        "shadow": 12,
+        "brightness": 100,
+        "contrast": 100,
+        "saturation": 100,
+        "grayscale": 0,
+        "zoom": 100
+      }
+    },
+    {
       "title": "בריתות",
       "category": "בריתות",
       "image": "/assets/brit.jpg",
@@ -34,24 +52,6 @@
       "image": "/assets/bar.jpg",
       "alt": "בר מצווה",
       "cover": false,
-      "style": {
-        "borderColor": "#d6ad55",
-        "borderWidth": 0,
-        "radius": 12,
-        "shadow": 12,
-        "brightness": 100,
-        "contrast": 100,
-        "saturation": 100,
-        "grayscale": 0,
-        "zoom": 100
-      }
-    },
-    {
-      "title": "חתונות",
-      "category": "חתונות",
-      "image": "/assets/wedding.jpg",
-      "alt": "חתונה",
-      "cover": true,
       "style": {
         "borderColor": "#d6ad55",
         "borderWidth": 0,
@@ -122,7 +122,13 @@
     "backgroundColor": "#080808",
     "panelColor": "#111111",
     "buttonRadius": 12,
-    "sectionSpacing": 72
+    "sectionSpacing": 72,
+    "buttonBg": "#d6ad55",
+    "buttonText": "#111111",
+    "buttonBorder": "#d6ad55",
+    "buttonHover": "#f0d18a",
+    "buttonBorderWidth": 1,
+    "buttonShadow": 16
   },
   "typography": {
     "heroWhite": {
@@ -130,14 +136,16 @@
       "size": 64,
       "weight": 700,
       "color": "#ffffff",
-      "letterSpacing": 0
+      "letterSpacing": 0,
+      "lineHeight": 1.15
     },
     "heroGold": {
-      "font": "Trebuchet MS",
+      "font": "Georgia",
       "size": 64,
       "weight": 700,
       "color": "#d6ad55",
-      "letterSpacing": 0
+      "letterSpacing": 0,
+      "lineHeight": 1.15
     },
     "body": {
       "font": "Arial",
@@ -191,18 +199,5 @@
     "provider": "none",
     "note": "חיבור נתוני מבקרים יוגדר בהמשך"
   },
-  "activity": [
-    {
-      "text": "תוכן האתר עודכן דרך HN Admin Studio",
-      "time": "2026-08-25T00:39:24.851Z"
-    },
-    {
-      "text": "תוכן האתר עודכן דרך HN Admin Studio",
-      "time": "2026-08-25T00:39:08.342Z"
-    },
-    {
-      "text": "תוכן האתר עודכן דרך HN Admin Studio",
-      "time": "2026-08-25T00:28:58.016Z"
-    }
-  ]
+  "activity": []
 }
