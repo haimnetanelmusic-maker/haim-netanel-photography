@@ -1,18 +1,13 @@
-Haim Netanel Photography — V13.1 Final Release Candidate
+HN Admin Studio V13.2 — Responsive Brand Release
 
-Current release:
-- Public photography website + HN Studio Admin
-- Responsive black/gold design
-- Gallery, About, Services, Service Areas, Reviews and Contact
-- Admin-managed content, gallery and design controls
-- Dynamic font selection with optimized public loading
-- WebP image optimization and lazy loading
-- SEO foundation: canonical/OG metadata, robots.txt, sitemap.xml and structured data
-- Netlify headers and redirects
-- Home gallery featured-image controls
-- Lightweight Hero options
-- Real photographer image installed and optimized
+Release focus:
+- Mobile-first responsive repair (360/390/412/430 widths)
+- Clean single public CSS/theme system; historical duplicate CSS removed
+- Public site loads Rubik only; Admin keeps the full dynamic font library
+- Editorial photography-first home page: larger selected work, about story, process, services, social proof and CTA
+- Featured home gallery remains controlled by featuredHome in Admin
+- Dynamic Hero carousel remains lightweight
+- Existing Admin, SEO, security headers, redirects, sitemap and content model preserved
+- Historical README V8–V11 files removed
 
-Release flow: GitHub -> Netlify production deploy.
-
-Version: V13.1 Final RC
+V13.1 remains the rollback point.
