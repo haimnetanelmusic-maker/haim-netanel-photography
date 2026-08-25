@@ -1,4 +1,4 @@
-HN Admin Studio V13.2 — Responsive Brand Release
+HN Admin Studio V13.3 — Responsive Brand Release
 
 Release focus:
 - Mobile-first responsive repair (360/390/412/430 widths)
@@ -11,3 +11,6 @@ Release focus:
 - Historical README V8–V11 files removed
 
 V13.1 remains the rollback point.
+
+
+V13.3: Desktop polish only — rebalanced hero copy, image crop and service bar; mobile/tablet V13.2 responsive fixes preserved.
