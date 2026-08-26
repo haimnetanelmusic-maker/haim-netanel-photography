@@ -3,13 +3,12 @@
     "title_white": "רגעים אמיתיים.",
     "title_gold": "זיכרונות שנשארים.",
     "description": "צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.",
-    "image": "/assets/hero.webp",
-    "mode": "cinematic",
+    "image": "/assets/hero-ring.webp",
+    "mode": "slideshow",
     "slides": [
-      "/assets/hero.webp",
-      "/assets/wedding.webp",
-      "/assets/events.webp",
-      "/assets/brit.webp"
+      "/assets/hero-ring.webp",
+      "/assets/hero-ketubah.webp",
+      "/assets/hero-chuppah.webp"
     ]
   },
   "about": {
@@ -111,20 +110,20 @@
   "areas": "נתיבות, באר שבע, אופקים, שדרות, אשקלון, אשדוד, קריית גת והסביבה",
   "services": [
     {
-      "title": "צילום אירועים",
-      "subtitle": "ברמה גבוהה"
+      "title": "ברית/ה",
+      "subtitle": "רגעים ראשונים של משפחה"
     },
     {
-      "title": "חתונות",
-      "subtitle": "תיעוד רגעים מרגשים"
+      "title": "בר/ת מצווה",
+      "subtitle": "שמחה, משפחה וזיכרונות"
     },
     {
-      "title": "בר/בת מצווה",
-      "subtitle": "שמחה בכל פריים"
+      "title": "אירוסין / חינה",
+      "subtitle": "צבע, מסורת ואהבה"
     },
     {
-      "title": "בריתות",
-      "subtitle": "תיעוד באהבה"
+      "title": "חתונה",
+      "subtitle": "היום שלכם, בדיוק כמו שהוא"
     }
   ],
   "theme": {

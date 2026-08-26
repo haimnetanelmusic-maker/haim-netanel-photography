@@ -7,7 +7,7 @@
   <title>Haim Netanel Photography | צלם אירועים בנתיבות והדרום</title>
   <meta name="description" content="צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום. Haim Netanel Photography.">
   <link rel="icon" type="image/png" href="assets/logo.webp">
-  <link rel="preload" as="image" href="assets/hero.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero-ring.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script>
     // Netlify Identity email links land on the site root with a token in the URL hash.
@@ -60,14 +60,14 @@
 </header>
 
 <main>
-  <section class="lux-hero">
-    <div class="lux-hero-photo cinematic-hero" aria-hidden="true">
-      <div class="hero-panel hero-panel-main" style="background-image:url('assets/hero.webp')"></div>
-      <div class="hero-panel" style="background-image:url('assets/wedding.webp')"></div>
-      <div class="hero-panel" style="background-image:url('assets/events.webp')"></div>
-      <div class="hero-panel" style="background-image:url('assets/brit.webp')"></div>
+  <section class="lux-hero v142-hero">
+    <div class="lux-hero-photo" aria-hidden="true">
+      <div class="hero-slide active" style="background-image:url('assets/hero-ring.webp')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-ketubah.webp')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-chuppah.webp')"></div>
     </div>
     <div class="lux-hero-shade" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
 
     <div class="lux-hero-content">
       <div class="lux-copy">
@@ -78,31 +78,30 @@
         <div class="hero-ornament"><span></span><b>◇</b><span></span></div>
         <p id="heroDescription">צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.</p>
         <div class="lux-actions">
-          <a class="btn lux-gold" href="https://wa.me/972523084940" data-wa-link data-wa-text="שלום חיים, אשמח לבדוק זמינות לאירוע" target="_blank" rel="noopener">◉ דברו איתי ב‑WhatsApp</a>
-          <a class="btn lux-outline" href="gallery.html">▣ צפו בגלריה</a>
+          <a class="btn lux-gold" href="https://wa.me/972523084940" data-wa-link data-wa-text="שלום חיים, אשמח לבדוק זמינות לאירוע" target="_blank" rel="noopener">דברו איתי ב‑WhatsApp</a>
+          <a class="btn lux-outline" href="gallery.html">צפו בגלריה</a>
         </div>
       </div>
     </div>
 
-    <div class="lux-service-bar">
-      <a href="services.html#events" class="lux-service-item">
-        <span class="lux-service-icon">▣</span>
-        <span><strong>צילום אירועים</strong><small>ברמה גבוהה</small></span>
+    <nav class="lux-service-bar event-links" aria-label="סוגי אירועים">
+      <a href="gallery.html#brit" class="lux-service-item event-link">
+        <span class="mini-ornament ornament-brit" aria-hidden="true"><i></i></span>
+        <span><strong>ברית/ה</strong><small>רגעים ראשונים של משפחה</small></span>
       </a>
-      <a href="services.html#weddings" class="lux-service-item">
-        <span class="lux-service-icon">◌</span>
-        <span><strong>חתונות</strong><small>תיעוד רגעים מרגשים</small></span>
+      <a href="gallery.html#bar" class="lux-service-item event-link">
+        <span class="mini-ornament ornament-bar" aria-hidden="true"><i></i></span>
+        <span><strong>בר/ת מצווה</strong><small>שמחה, משפחה וזיכרונות</small></span>
       </a>
-      <a href="services.html#bar" class="lux-service-item">
-        <span class="lux-service-icon">✦</span>
-        <span><strong>בר/בת מצווה</strong><small>שמחה בכל פריים</small></span>
+      <a href="gallery.html#engagement" class="lux-service-item event-link">
+        <span class="mini-ornament ornament-engagement" aria-hidden="true"><i></i></span>
+        <span><strong>אירוסין / חינה</strong><small>צבע, מסורת ואהבה</small></span>
       </a>
-      <a href="services.html#brit" class="lux-service-item">
-        <span class="lux-service-icon">◉</span>
-        <span><strong>בריתות</strong><small>תיעוד באהבה</small></span>
+      <a href="gallery.html#weddings" class="lux-service-item event-link">
+        <span class="mini-ornament ornament-wedding" aria-hidden="true"><i></i></span>
+        <span><strong>חתונה</strong><small>היום שלכם, בדיוק כמו שהוא</small></span>
       </a>
-    </div>
-    <a class="lux-scroll" href="#home-preview" aria-label="המשך למטה">⌄</a>
+    </nav>
   </section>
 
   <section id="home-preview" class="home-preview-section">
