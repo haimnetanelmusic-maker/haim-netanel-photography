@@ -125,3 +125,16 @@ header:not(.lux-header){position:sticky;top:0;z-index:50;background:rgba(5,5,5,.
 
 @media(max-width:980px){.home-page .v142-hero .lux-copy{padding:20px 18px 22px;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.45));backdrop-filter:none}.home-page .v142-hero .lux-hero-shade{background:linear-gradient(180deg,rgba(0,0,0,.18) 0%,rgba(0,0,0,.28) 32%,rgba(3,3,3,.82) 58%,#030303 82%)}.contact-steps li{grid-template-columns:42px 1fr}}
 @media(max-width:640px){.home-preview-section{padding-top:72px}.home-page .v142-hero .lux-copy{padding:16px 10px 18px;border-radius:18px}.contact-after h2{font-size:30px}.contact-steps{gap:14px}.contact-steps li{padding-bottom:14px}.contact-steps small{font-size:12px}}
+
+/* V14.3.1 — consolidated polish */
+.home-page .v142-hero .hero-slide:first-child{background-position:center center!important}
+.home-page .v142-hero .lux-hero-shade{background:linear-gradient(90deg,rgba(2,2,2,.94) 0%,rgba(2,2,2,.88) 20%,rgba(2,2,2,.70) 38%,rgba(2,2,2,.34) 55%,rgba(2,2,2,.07) 76%,rgba(2,2,2,.015) 100%),linear-gradient(180deg,rgba(0,0,0,.04),rgba(0,0,0,.10))}
+.home-page .v142-hero .hero-white{filter:drop-shadow(0 5px 18px rgba(0,0,0,.55))}
+.home-page .v142-hero .hero-gold{filter:drop-shadow(0 6px 20px rgba(0,0,0,.55));transform-origin:center;animation:hnGoldPresence 1s ease both .15s}
+.home-page .v142-hero .event-link{animation:hnEventIn .65s ease both}
+.home-page .v142-hero .event-link:nth-child(2){animation-delay:.08s}.home-page .v142-hero .event-link:nth-child(3){animation-delay:.16s}.home-page .v142-hero .event-link:nth-child(4){animation-delay:.24s}
+@keyframes hnGoldPresence{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes hnEventIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.form-status.success{box-shadow:0 10px 34px rgba(211,163,61,.08)}
+#leadSubmit{transition:opacity .2s,transform .2s,box-shadow .2s}
+@media(prefers-reduced-motion:reduce){.home-page .v142-hero .hero-gold,.home-page .v142-hero .event-link{animation:none!important}}

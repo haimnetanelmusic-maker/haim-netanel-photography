@@ -14,11 +14,11 @@ if(leadForm){
     const honey=document.getElementById('website');
     if(honey&&honey.value) return;
     const payload={
-      name:document.getElementById('name').value.trim(),
-      event:document.getElementById('event').value.trim(),
-      date:document.getElementById('date').value.trim()||'לא צוין',
-      phone:document.getElementById('phone').value.trim(),
-      message:document.getElementById('message').value.trim()||'ללא הודעה נוספת',
+      'שם מלא':document.getElementById('name').value.trim(),
+      'סוג אירוע':document.getElementById('event').value.trim(),
+      'תאריך האירוע':document.getElementById('date').value.trim()||'לא צוין',
+      'טלפון':document.getElementById('phone').value.trim(),
+      'הודעה':document.getElementById('message').value.trim()||'ללא הודעה נוספת',
       _subject:'פנייה חדשה מהאתר - Haim Netanel Photography',
       _template:'table'
     };
@@ -36,7 +36,7 @@ if(leadForm){
       await res.json();
       leadForm.reset();
       status.className='form-status success';
-      status.innerHTML='<strong>הפנייה נשלחה בהצלחה ✓</strong><span>קיבלתי את הפרטים ואחזור אליכם בהקדם.</span>';
+      status.innerHTML='<strong>תודה! הפנייה התקבלה בהצלחה ✨</strong><span>אחזור אליכם בהקדם לבדיקת זמינות והמשך תיאום.</span>';
     }catch(err){
       status.className='form-status error';
       status.innerHTML='<strong>השליחה לא הצליחה כרגע.</strong><span>אפשר לנסות שוב בעוד רגע או להתקשר אליי.</span>';
