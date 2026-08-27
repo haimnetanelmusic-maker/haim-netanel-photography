@@ -1,60 +1,11 @@
-const btn=document.querySelector('.menu-btn');
-const links=document.querySelector('.links');
-if(btn&&links){btn.setAttribute('aria-expanded', links.classList.contains('open') ? 'true' : 'false');btn.addEventListener('click',()=>{const isOpen=links.classList.toggle('open');btn.setAttribute('aria-expanded',isOpen?'true':'false');});}
-const leadForm=document.getElementById('leadForm');
-if(leadForm){
-  const status=document.getElementById('formStatus');
-  const submit=document.getElementById('leadSubmit');
-  leadForm.addEventListener('submit',async function(e){
-    e.preventDefault();
-    if(!leadForm.checkValidity()){
-      leadForm.reportValidity();
-      return;
-    }
-    const honey=document.getElementById('website');
-    if(honey&&honey.value) return;
-    const payload={
-      'שם מלא':document.getElementById('name').value.trim(),
-      'סוג אירוע':document.getElementById('event').value.trim(),
-      'תאריך האירוע':document.getElementById('date').value.trim()||'לא צוין',
-      'טלפון':document.getElementById('phone').value.trim(),
-      'הודעה':document.getElementById('message').value.trim()||'ללא הודעה נוספת',
-      _subject:'פנייה חדשה מהאתר - Haim Netanel Photography',
-      _template:'table'
-    };
-    submit.disabled=true;
-    submit.textContent='שולח...';
-    status.className='form-status';
-    status.textContent='שולח את הפנייה...';
-    try{
-      const res=await fetch('https://formsubmit.co/ajax/haimnetanelhatzalam@gmail.com',{
-        method:'POST',
-        headers:{'Content-Type':'application/json','Accept':'application/json'},
-        body:JSON.stringify(payload)
-      });
-      if(!res.ok) throw new Error('submit failed');
-      await res.json();
-      leadForm.reset();
-      status.className='form-status success';
-      status.innerHTML='<strong>תודה! הפנייה התקבלה בהצלחה ✨</strong><span>אחזור אליכם בהקדם לבדיקת זמינות והמשך תיאום.</span>';
-    }catch(err){
-      status.className='form-status error';
-      status.innerHTML='<strong>השליחה לא הצליחה כרגע.</strong><span>אפשר לנסות שוב בעוד רגע או להתקשר אליי.</span>';
-    }finally{
-      submit.disabled=false;
-      submit.textContent='שליחת פנייה';
-    }
-  });
-}
-
-// V14.3: cinematic hero rotation with a slower, softer cadence.
-const heroSlides=[...document.querySelectorAll('.v142-hero .hero-slide')];
-if(heroSlides.length>1&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  let heroIndex=heroSlides.findIndex(el=>el.classList.contains('active'));
-  if(heroIndex<0) heroIndex=0;
-  window.setInterval(()=>{
-    heroSlides[heroIndex].classList.remove('active');
-    heroIndex=(heroIndex+1)%heroSlides.length;
-    heroSlides[heroIndex].classList.add('active');
-  },6500);
-}
+(function(){
+'use strict';
+const btn=document.querySelector('.menu-btn');const links=document.querySelector('.links');
+if(btn&&links){btn.addEventListener('click',()=>{const open=links.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});document.addEventListener('click',e=>{if(!links.contains(e.target)&&!btn.contains(e.target)&&links.classList.contains('open')){links.classList.remove('open');btn.setAttribute('aria-expanded','false');}})}
+// Netlify Identity deep links: keep auth tokens inside the CMS path.
+const hash=location.hash||'';if(/^#(?:invite_token|confirmation_token|recovery_token|access_token|error)=/i.test(hash)&&!location.pathname.includes('/admin')){location.replace('admin/'+hash);return;}
+// Hero rotation
+const slides=[...document.querySelectorAll('.hero-slide')];if(slides.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches){let i=Math.max(0,slides.findIndex(x=>x.classList.contains('active')));setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active')},7000)}
+// Lead form: validation + honeypot + short client cooldown. Server-side anti-abuse remains with FormSubmit/hosting provider.
+const leadForm=document.getElementById('leadForm');if(leadForm){const status=document.getElementById('formStatus'),submit=document.getElementById('leadSubmit');leadForm.addEventListener('submit',async e=>{e.preventDefault();if(!leadForm.checkValidity()){leadForm.reportValidity();return}const honey=document.getElementById('website');if(honey&&honey.value)return;const last=Number(sessionStorage.getItem('hn-last-submit')||0);if(Date.now()-last<45000){status.className='form-status error';status.textContent='כבר נשלחה פנייה לפני רגע. אפשר להמתין מעט ולנסות שוב.';return}const phone=(document.getElementById('phone')?.value||'').replace(/\s|-/g,'');if(!/^0?5\d{8}$/.test(phone)){status.className='form-status error';status.textContent='נא להזין מספר טלפון ישראלי תקין.';return}const payload={'שם מלא':document.getElementById('name').value.trim(),'סוג אירוע':document.getElementById('event').value.trim(),'תאריך האירוע':document.getElementById('date').value.trim()||'לא צוין','טלפון':document.getElementById('phone').value.trim(),'הודעה':document.getElementById('message').value.trim()||'ללא הודעה נוספת',_subject:'פנייה חדשה מהאתר - Haim Netanel Photography',_template:'table',_captcha:'true'};submit.disabled=true;submit.textContent='שולח...';status.className='form-status';status.textContent='שולח את הפנייה...';try{const res=await fetch('https://formsubmit.co/ajax/haimnetanelhatzalam@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});if(!res.ok)throw new Error('submit failed');await res.json();sessionStorage.setItem('hn-last-submit',String(Date.now()));leadForm.reset();status.className='form-status success';status.innerHTML='<strong>תודה, הפנייה התקבלה בהצלחה.</strong><span>אחזור אליכם בהקדם לבדיקת זמינות והמשך תיאום.</span>'}catch(err){status.className='form-status error';status.innerHTML='<strong>השליחה לא הצליחה כרגע.</strong><span>אפשר לנסות שוב בעוד רגע או להתקשר אליי.</span>'}finally{submit.disabled=false;submit.textContent='שליחת פנייה'}})}
+})();

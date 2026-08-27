@@ -2,184 +2,109 @@
 <html lang="he" dir="rtl">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#050505">
-  <title>Haim Netanel Photography | צלם אירועים בנתיבות והדרום</title>
-  <meta name="description" content="צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום. Haim Netanel Photography.">
-  <link rel="icon" type="image/png" href="assets/logo.webp">
-  <link rel="preload" as="image" href="assets/hero-ring.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css">
-  <script>
-    // Netlify Identity email links land on the site root with a token in the URL hash.
-    // Forward those links to Decap CMS so the Identity widget can complete invite,
-    // confirmation and password-recovery flows.
-    (function () {
-      var hash = window.location.hash || '';
-      var identityToken = /^#(?:invite_token|confirmation_token|recovery_token|access_token|error)=/i.test(hash);
-      if (identityToken && !window.location.pathname.startsWith('/admin')) {
-        window.location.replace('/admin/' + hash);
-      }
-    })();
-  </script>
-
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://formsubmit.co https://fonts.googleapis.com https://fonts.gstatic.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; upgrade-insecure-requests">
+  <title>Haim Netanel Photography | צילום אירועים ושמחות</title>
+  <meta name="description" content="צילום בריתות, בר ובת מצווה, עלייה לתורה, חינות וחתונות. צילום מקצועי, מכבד ורגיש למשפחה, למסורת ולרגעים החשובים באמת.">
   <link rel="canonical" href="https://haim-netanel-photography.netlify.app/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="he_IL">
-  <meta property="og:title" content="Haim Netanel Photography | צלם אירועים בנתיבות והדרום">
-  <meta property="og:description" content="צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום.">
-  <meta property="og:url" content="https://haim-netanel-photography.netlify.app/">
-  <meta property="og:image" content="https://haim-netanel-photography.netlify.app/assets/hero.jpg">
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/story-ring.webp" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <meta property="og:type" content="website"><meta property="og:locale" content="he_IL">
+  <meta property="og:title" content="Haim Netanel Photography | צילום אירועים ושמחות">
+  <meta property="og:description" content="בריתות, בר/בת מצווה, עלייה לתורה, חינות וחתונות — תיעוד מקצועי, טבעי ומכבד.">
+  <meta property="og:image" content="https://haim-netanel-photography.netlify.app/assets/story-ring.webp">
   <meta name="twitter:card" content="summary_large_image">
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Haim Netanel Photography","url":"https://haim-netanel-photography.netlify.app/","image":"https://haim-netanel-photography.netlify.app/assets/hero.jpg","logo":"https://haim-netanel-photography.netlify.app/assets/logo.webp","telephone":"+972523084940","areaServed":["נתיבות","באר שבע","דרום ישראל"],"knowsAbout":["צילום אירועים","צילום חתונות","צילום בריתות","צילום בר מצווה","צילום בת מצווה"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Haim Netanel Photography","url":"https://haim-netanel-photography.netlify.app/","logo":"https://haim-netanel-photography.netlify.app/assets/logo.webp","image":"https://haim-netanel-photography.netlify.app/assets/story-ring.webp","telephone":"+972523084940","areaServed":["נתיבות","באר שבע","אשקלון","ירושלים","דרום ישראל"],"knowsAbout":["צילום אירועים","צילום בריתות","צילום בר מצווה","צילום בת מצווה","צילום עלייה לתורה","צילום חינה","צילום חתונות"]}</script>
 </head>
 <body class="home-page">
-<header class="lux-header">
-  <div class="lux-nav-wrap">
-    <a class="lux-logo" href="index.html" aria-label="Haim Netanel Photography">
-      <span class="lux-hn">HN</span>
-      <span class="lux-name">HAIM NETANEL</span>
-      <span class="lux-photo">PHOTOGRAPHY</span>
+<header class="site-header transparent-header">
+  <div class="site-nav wrap-wide">
+    <a class="brand-mark" href="index.html" aria-label="Haim Netanel Photography">
+      <span class="brand-hn">HN</span><span class="brand-name">HAIM NETANEL</span><span class="brand-sub">PHOTOGRAPHY</span>
     </a>
-
-    <div class="links lux-links">
-      <a href="index.html" class="active">דף הבית</a><a href="gallery.html">גלריה</a>
-      <a href="about.html">אודות</a>
-      <a href="services.html">שירותים</a>
-      
-      <a href="areas.html">אזורי שירות</a>
-      <a href="reviews.html">המלצות</a>
-      <a href="contact.html">יצירת קשר</a>
-    </div>
-
-    <a class="lux-whatsapp-top v15-top-cta" href="contact.html">
-      <span class="wa-icon">✦</span> בדיקת זמינות
-    </a>
-    <button class="menu-btn" aria-label="פתיחת תפריט" aria-expanded="false">☰</button>
+    <nav class="links" aria-label="ניווט ראשי">
+      <a class="active" href="index.html">דף הבית</a><a href="gallery.html">גלריה</a><a href="services.html">שירותים</a><a href="about.html">אודות</a><a href="areas.html">אזורי שירות</a><a href="reviews.html">המלצות</a><a href="contact.html">יצירת קשר</a>
+    </nav>
+    <a class="header-cta" href="contact.html">בדיקת זמינות</a>
+    <button class="menu-btn" type="button" aria-label="פתיחת תפריט" aria-expanded="false">☰</button>
   </div>
 </header>
 
 <main>
-  <section class="lux-hero v142-hero">
-    <div class="lux-hero-photo" aria-hidden="true">
-      <div class="hero-slide active" style="background-image:url('assets/hero-ring.webp')"></div>
-      <div class="hero-slide" style="background-image:url('assets/hero-ketubah.webp')"></div>
-      <div class="hero-slide" style="background-image:url('assets/hero-chuppah.webp')"></div>
+  <section class="signature-hero v142-hero">
+    <div class="hero-media lux-hero-photo" aria-hidden="true">
+      <div class="hero-slide active" style="background-image:url('assets/story-ring.webp')"></div>
+      <div class="hero-slide" style="background-image:url('assets/story-ketubah.webp')"></div>
+      <div class="hero-slide" style="background-image:url('assets/story-chuppah.webp')"></div>
     </div>
-    <div class="lux-hero-shade" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
-
-    <div class="lux-hero-content">
-      <div class="lux-copy">
-        <h1>
-          <span class="hero-white" id="heroTitleWhite">רגעים אמיתיים.</span>
-          <span class="hero-gold" id="heroTitleGold">זיכרונות שנשארים.</span>
-        </h1>
-        <div class="hero-ornament"><span></span><b>◇</b><span></span></div>
+    <div class="hero-film"></div>
+    <div class="hero-content wrap-wide">
+      <div class="hero-copy lux-copy">
+        <span class="eyebrow">HAIM NETANEL · EVENT PHOTOGRAPHY</span>
+        <h1><span id="heroTitleWhite" class="hero-white">רגעים אמיתיים.</span><span id="heroTitleGold" class="hero-gold">זיכרונות שנשארים.</span></h1>
+        <div class="ornament-line"><i></i><b>◇</b><i></i></div>
         <p id="heroDescription">צילום שמחות ומשפחה בגישה טבעית, מכבדת ומדויקת — מהברית והעלייה לתורה, דרך החינה ועד החופה.</p>
-        <div class="lux-actions">
-          <a class="btn lux-gold" href="contact.html">בדיקת זמינות לאירוע</a>
-          <a class="btn lux-outline" href="gallery.html">צפו בגלריה</a>
-        </div>
+        <div class="hero-actions lux-actions"><a class="btn primary" href="contact.html">בדיקת זמינות לאירוע</a><a class="btn ghost" href="gallery.html">צפו בעבודות</a></div>
       </div>
     </div>
-
-    <nav class="lux-service-bar event-links" aria-label="סוגי אירועים">
-      <a href="gallery.html#brit" class="lux-service-item event-link">
-        <span class="mini-ornament ornament-brit" aria-hidden="true"><i></i></span>
-        <span><strong>ברית/ה</strong><small>רגעים ראשונים של משפחה</small></span>
-      </a>
-      <a href="gallery.html#bar" class="lux-service-item event-link">
-        <span class="mini-ornament ornament-bar" aria-hidden="true"><i></i></span>
-        <span><strong>בר/ת מצווה</strong><small>שמחה, משפחה וזיכרונות</small></span>
-      </a>
-      <a href="gallery.html#engagement" class="lux-service-item event-link">
-        <span class="mini-ornament ornament-engagement" aria-hidden="true"><i></i></span>
-        <span><strong>אירוסין / חינה</strong><small>צבע, מסורת ואהבה</small></span>
-      </a>
-      <a href="gallery.html#weddings" class="lux-service-item event-link">
-        <span class="mini-ornament ornament-wedding" aria-hidden="true"><i></i></span>
-        <span><strong>חתונה</strong><small>היום שלכם, בדיוק כמו שהוא</small></span>
-      </a>
+    <nav class="event-ribbon lux-service-bar" aria-label="סוגי אירועים">
+      <a class="lux-service-item" href="gallery.html#brit"><span class="event-icon">◌</span><span><strong>ברית / בריתה</strong><small>הרגעים הראשונים</small></span></a>
+      <a class="lux-service-item" href="gallery.html#bar"><span class="event-icon">✦</span><span><strong>בר / בת מצווה</strong><small>עלייה לתורה ושמחה</small></span></a>
+      <a class="lux-service-item" href="gallery.html#engagement"><span class="event-icon">◇</span><span><strong>אירוסין / חינה</strong><small>מסורת, צבע ומשפחה</small></span></a>
+      <a class="lux-service-item" href="gallery.html#weddings"><span class="event-icon">∞</span><span><strong>חתונה</strong><small>היום שנשאר איתכם</small></span></a>
     </nav>
+    <a class="scroll-cue" href="#stories" aria-label="גלילה לסיפורים נבחרים">⌄</a>
   </section>
 
-  <section id="home-preview" class="home-preview-section">
-    <div class="wrap">
-      <div class="editorial-heading">
-        <small>SELECTED STORIES · סיפורים נבחרים</small>
-        <h2>שמחות שעוברות מהר.<br><em>תמונות שנשארות למשפחה.</em></h2>
-        <p>לא עוד אוסף תמונות — סיפור שלם של אנשים, מסורת, משפחה והרגעים הקטנים שביניהם.</p>
-      </div>
-      <div class="featured-gallery" id="homeGalleryGrid">
-        <a class="thumb featured-main" href="gallery.html"><img loading="lazy" src="assets/wedding.webp" alt="חתונה"><span>חתונות</span></a>
-        <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/brit.webp" alt="ברית"><span>בריתות</span></a>
-        <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/bar.webp" alt="בר מצווה"><span>בר/בת מצווה</span></a>
-        <a class="thumb" href="gallery.html"><img loading="lazy" src="assets/events.webp" alt="אירוע"><span>אירועים</span></a>
-      </div>
-      <div class="center-action"><a class="btn" href="gallery.html">לגלריה המלאה</a></div>
+  <section id="stories" class="stories-section home-preview-section">
+    <div class="section-intro wrap">
+      <span class="eyebrow">SELECTED STORIES · סיפורים נבחרים</span>
+      <h2>לא רק תמונות.<br><em>סיפור משפחתי שלם.</em></h2>
+      <p>אני מחפש את המבטים, הידיים, הטקס, השמחה והרגעים הקטנים שאי אפשר לביים מחדש.</p>
+    </div>
+    <div id="homeGalleryGrid" class="story-stack featured-gallery">
+      <a class="story-card thumb featured-main" href="gallery.html#weddings"><img src="assets/story-ring.webp" alt="רגע הטבעת בחתונה" loading="lazy"><span><b>חתונה</b><small>רגעים שקטים בתוך יום גדול</small></span></a>
+      <a class="story-card thumb" href="gallery.html#bar"><img src="assets/story-ketubah.webp" alt="חתימה על הכתובה" loading="lazy"><span><b>בר / בת מצווה ועלייה לתורה</b><small>מסורת, משפחה והתרגשות</small></span></a>
+      <a class="story-card thumb" href="gallery.html#brit"><img src="assets/story-chuppah.webp" alt="חופה מעוצבת באירוע" loading="lazy"><span><b>ברית / בריתה</b><small>זיכרון ראשון שנשאר</small></span></a>
+      <a class="story-card thumb" href="gallery.html#engagement"><img src="assets/events.webp" alt="אירוע משפחתי" loading="lazy"><span><b>אירוסין / חינה</b><small>צבע, מסורת ואנרגיה</small></span></a>
+    </div>
+    <div class="center-action"><a class="text-link" href="gallery.html">לצפייה בגלריה המלאה ←</a></div>
+  </section>
+
+  <section class="trust-strip">
+    <div class="wrap trust-grid">
+      <article><b>01</b><h3>מכיר את סדר האירוע</h3><p>תפילה, עלייה לתורה, חופה, חינה ורגעים משפחתיים — בלי להפריע לרצף.</p></article>
+      <article><b>02</b><h3>נוכחות רגועה</h3><p>צילום מקצועי ומכבד, עם רגישות למשפחה, לאורחים ולמנהגים.</p></article>
+      <article><b>03</b><h3>תוצאה נקייה וחיה</h3><p>חדות, צבעים מחמיאים ועריכה שמחזירה אתכם לאווירה של האירוע.</p></article>
     </div>
   </section>
 
-  <section class="home-about-story">
-    <div class="wrap about-story-grid">
-      <div class="about-story-photo"><img loading="lazy" id="aboutPreviewImage" src="assets/photographer.webp" alt="חיים נתנאל – צלם אירועים"></div>
-      <div class="about-story-copy"><small>ABOUT · נעים להכיר</small><h2 id="aboutPreviewTitle">נעים להכיר</h2><p id="aboutPreviewText">אני חיים נתנאל, צלם אירועים ושמחות. חשוב לי להכיר את הקצב של האירוע, להיות נוכח בלי להפריע ולתעד בכבוד את המשפחה, המסורת והרגש.</p><blockquote id="aboutHighlight">צילום מקצועי, מכבד ורגיש לרגעים החשובים באמת</blockquote><a class="btn" href="about.html">קצת יותר עליי</a></div>
+  <section class="editorial-about home-about-story">
+    <div class="wrap about-editorial-grid">
+      <figure class="about-portrait about-story-photo"><img id="aboutPreviewImage" src="assets/photographer.webp" alt="חיים נתנאל – צלם אירועים" loading="lazy"></figure>
+      <div class="about-editorial-copy about-story-copy"><span class="eyebrow">מאחורי המצלמה</span><h2 id="aboutPreviewTitle">נעים להכיר, חיים נתנאל.</h2><p id="aboutPreviewText">אני מצלם שמחות מתוך אהבה לאנשים ולרגעים שאי אפשר לחזור עליהם. המטרה שלי היא שתהיו בתוך האירוע — ואני אדאג שהזיכרונות יישארו.</p><blockquote id="aboutHighlight">צילום מקצועי, מכבד ורגיש לרגעים החשובים באמת.</blockquote><a class="text-link dark-link" href="about.html">קצת יותר עליי ←</a></div>
     </div>
   </section>
 
-  <section class="home-process">
-    <div class="wrap"><div class="editorial-heading compact"><small>THE EXPERIENCE · הדרך שלנו</small><h2>אתם חוגגים.<br><em>אני דואג שהרגעים יישארו.</em></h2></div><div id="processGrid" class="process-grid">
-      <article><b>01</b><h3>מכירים ומתאמים</h3><p>מדברים על האירוע, הסגנון והדברים שהכי חשוב לכם לזכור.</p></article>
-      <article><b>02</b><h3>מתכננים נכון</h3><p>סוגרים לו״ז, נקודות צילום וכל הפרטים לקראת היום.</p></article>
-      <article><b>03</b><h3>מצלמים את הרגע</h3><p>תיעוד טבעי ומדויק מהרגעים השקטים ועד לרחבה.</p></article>
-      <article><b>04</b><h3>עורכים בקפידה</h3><p>בחירה ועיבוד מקצועי במראה טבעי ונקי.</p></article>
-      <article><b>05</b><h3>מקבלים וזוכרים</h3><p>מסירה מסודרת ונוחה, מוכנה לשיתוף ולשמירה.</p></article>
-    </div></div>
-  </section>
-
-  <section class="home-packages">
-    <div class="wrap"><div class="editorial-heading compact"><small>CELEBRATIONS · השמחות שאני מצלם</small><h2>כל שמחה והסיפור שלה.<br><em>כל משפחה והזיכרונות שלה.</em></h2></div><div id="packagesGrid" class="package-grid">
-      <a href="services.html#brit"><span>01</span><h3>ברית / בריתה</h3><p>רגעים ראשונים, משפחה והתרגשות — בתיעוד נקי ורגיש.</p><b>לפרטים ←</b></a>
-      <a href="services.html#bar"><span>02</span><h3>בר / בת מצווה</h3><p>עלייה לתורה, משפחה והשמחה עצמה — בסיפור אחד שלם.</p><b>לפרטים ←</b></a>
-      <a href="services.html#engagement"><span>03</span><h3>אירוסין / חינה</h3><p>צבע, מסורת, משפחה ורגעים מלאי אופי.</p><b>לפרטים ←</b></a>
-      <a href="services.html#weddings"><span>04</span><h3>חתונות</h3><p>מהחופה ועד הרחבה, עם תשומת לב לאנשים ולרגעים.</p><b>לפרטים ←</b></a>
-    </div></div>
-  </section>
-
-  <section class="home-reviews" id="home-reviews">
-    <div class="wrap"><div class="editorial-heading compact"><small>CLIENT WORDS · משפחות מספרות</small><h2>תמונות יפות זה חשוב.<br><em>להרגיש בנוח — לא פחות.</em></h2></div><div id="homeReviewsGrid" class="home-reviews-grid"></div><div class="center-action"><a class="btn" href="reviews.html">לכל ההמלצות</a></div></div>
-  </section>
-
-  <section class="home-cta-section">
-    <div class="wrap">
-      <div class="cta-strip">
-        <div>
-          <h3>יש שמחה באופק?</h3>
-          <p>ספרו לי איזה אירוע אתם חוגגים ומתי — ואחזור אליכם אישית עם זמינות ופרטים.</p>
-        </div>
-        <div class="actions">
-          <a class="btn gold" href="contact.html">בדיקת זמינות</a>
-          <a class="btn" href="tel:+972523084940" data-phone-link><span class="phone-ltr" data-phone-display>052-308-4940</span></a>
-        </div>
-      </div>
+  <section class="experience-section home-process">
+    <div class="section-intro wrap"><span class="eyebrow">THE EXPERIENCE · הדרך</span><h2>פשוט, רגוע ומסודר.<br><em>מהשיחה הראשונה ועד למסירה.</em></h2></div>
+    <div id="processGrid" class="wrap process-grid clean-process">
+      <article><b>01</b><h3>מכירים</h3><p>מדברים על האירוע והדברים שחשוב לכם לתעד.</p></article><article><b>02</b><h3>מתכננים</h3><p>סוגרים לוח זמנים, נקודות צילום ודגשים.</p></article><article><b>03</b><h3>מצלמים</h3><p>תיעוד טבעי ומדויק בלי להוציא אתכם מהאירוע.</p></article><article><b>04</b><h3>עורכים</h3><p>בחירה, צבע ועריכה נקייה ומוקפדת.</p></article><article><b>05</b><h3>מקבלים</h3><p>מסירה מסודרת ונוחה לשיתוף ולשמירה.</p></article>
     </div>
   </section>
+
+  <section class="reviews-band home-reviews">
+    <div class="section-intro wrap"><span class="eyebrow">מילים שנשארו אחרי האירוע</span><h2>החוויה חשובה<br><em>לא פחות מהתמונות.</em></h2></div>
+    <div id="homeReviewsGrid" class="wrap home-reviews-grid"><article class="home-review"><p>אזור ההמלצות מוכן להצגת המלצות אמיתיות של לקוחות.</p></article></div>
+  </section>
+
+  <section class="final-cta home-cta-section"><div class="wrap final-cta-inner cta-strip"><div><span class="eyebrow">האירוע שלכם מתחיל כאן</span><h2>רוצים לבדוק אם התאריך פנוי?</h2><p>השאירו כמה פרטים ואחזור אליכם עם זמינות והמשך תיאום.</p></div><a class="btn primary" href="contact.html">שליחת פנייה</a></div></section>
 </main>
 
-<a class="floating-wa" href="https://wa.me/972523084940" data-wa-link target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
-
-<footer>
-  <div class="wrap foot">
-    <strong>HN · HAIM NETANEL PHOTOGRAPHY</strong>
-    <span>© 2026 כל הזכויות שמורות</span>
-    <div class="foot-links">
-      <a href="contact.html">יצירת קשר</a>
-      <a href="https://www.google.com/search?q=Haim+Netanel+Photography" target="_blank" rel="noopener">Google Business</a>
-    </div>
-  </div>
-</footer>
-<script src="script.js"></script>
-<script src="cms.js"></script>
-</body>
-</html>
+<footer class="site-footer"><div class="wrap foot"><strong>HN · HAIM NETANEL PHOTOGRAPHY</strong><span>© 2026 כל הזכויות שמורות</span><div class="foot-links"><a href="contact.html">יצירת קשר</a><a href="privacy.html">פרטיות</a><a href="terms.html">תנאי שימוש</a></div></div></footer>
+<script src="script.js" defer></script><script src="cms.js" defer></script>
+</body></html>

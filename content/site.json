@@ -2,105 +2,106 @@
   "hero": {
     "title_white": "רגעים אמיתיים.",
     "title_gold": "זיכרונות שנשארים.",
-    "description": "צילום אירועים ברמה גבוהה, עם ניסיון, מקצועיות ורגש בכל פריים.",
-    "image": "/assets/hero-ring.webp",
+    "description": "צילום שמחות ומשפחה בגישה טבעית, מכבדת ומדויקת — מהברית והעלייה לתורה, דרך החינה ועד החופה.",
+    "image": "/assets/story-ring.webp",
     "mode": "slideshow",
     "slides": [
-      "/assets/hero-ring.webp",
-      "/assets/hero-ketubah.webp",
-      "/assets/hero-chuppah.webp"
+      "/assets/story-ring.webp",
+      "/assets/story-ketubah.webp",
+      "/assets/story-chuppah.webp"
     ]
   },
   "about": {
-    "title": "נעים להכיר",
-    "text": "אני חיים נתנאל, צלם אירועים. המטרה שלי היא לתעד את האנשים, האווירה והרגש בצורה נקייה ומקצועית.",
+    "title": "נעים להכיר, חיים נתנאל.",
+    "text": "אני מצלם שמחות מתוך אהבה לאנשים ולרגעים שאי אפשר לחזור עליהם. המטרה שלי היא שתהיו בתוך האירוע — ואני אדאג שהזיכרונות יישארו.",
     "image": "/assets/photographer.webp",
     "imageAlt": "חיים נתנאל – צילום אירועים",
-    "highlight": "צילום עם נוכחות, רגש ודיוק"
+    "highlight": "צילום מקצועי, מכבד ורגיש לרגעים החשובים באמת."
   },
   "gallery": [
     {
-      "title": "חתונות",
+      "title": "חתונה · טבעת",
       "category": "חתונות",
-      "image": "/assets/wedding.webp",
-      "alt": "חתונה",
+      "image": "/assets/story-ring.webp",
+      "alt": "רגע נתינת הטבעת בחתונה",
       "cover": true,
+      "featuredHome": true,
       "style": {
-        "borderColor": "#d6ad55",
+        "borderColor": "#d9ad4a",
         "borderWidth": 0,
-        "radius": 12,
-        "shadow": 12,
+        "radius": 0,
+        "shadow": 0,
         "brightness": 100,
         "contrast": 100,
         "saturation": 100,
         "grayscale": 0,
         "zoom": 100
-      },
-      "featuredHome": true
+      }
     },
     {
-      "title": "בריתות",
-      "category": "בריתות",
-      "image": "/assets/brit.webp",
-      "alt": "ברית",
+      "title": "חתונה · כתובה",
+      "category": "חתונות",
+      "image": "/assets/story-ketubah.webp",
+      "alt": "חתימה על הכתובה",
       "cover": false,
+      "featuredHome": true,
       "style": {
-        "borderColor": "#d6ad55",
+        "borderColor": "#d9ad4a",
         "borderWidth": 0,
-        "radius": 12,
-        "shadow": 12,
+        "radius": 0,
+        "shadow": 0,
         "brightness": 100,
         "contrast": 100,
         "saturation": 100,
         "grayscale": 0,
         "zoom": 100
-      },
-      "featuredHome": true
+      }
     },
     {
-      "title": "בר/בת מצווה",
-      "category": "בר/בת מצווה",
-      "image": "/assets/bar.webp",
-      "alt": "בר מצווה",
+      "title": "חופה",
+      "category": "חתונות",
+      "image": "/assets/story-chuppah.webp",
+      "alt": "חופה מעוצבת",
       "cover": false,
+      "featuredHome": true,
       "style": {
-        "borderColor": "#d6ad55",
+        "borderColor": "#d9ad4a",
         "borderWidth": 0,
-        "radius": 12,
-        "shadow": 12,
+        "radius": 0,
+        "shadow": 0,
         "brightness": 100,
         "contrast": 100,
         "saturation": 100,
         "grayscale": 0,
         "zoom": 100
-      },
-      "featuredHome": true
+      }
     },
     {
-      "title": "אירועים",
-      "category": "אירועים",
+      "title": "אירוע משפחתי",
+      "category": "אירוסין / חינה",
       "image": "/assets/events.webp",
-      "alt": "אירוע",
+      "alt": "אירוע משפחתי",
       "cover": false,
+      "featuredHome": true,
       "style": {
-        "borderColor": "#d6ad55",
+        "borderColor": "#d9ad4a",
         "borderWidth": 0,
-        "radius": 12,
-        "shadow": 12,
+        "radius": 0,
+        "shadow": 0,
         "brightness": 100,
         "contrast": 100,
         "saturation": 100,
         "grayscale": 0,
         "zoom": 100
-      },
-      "featuredHome": true
+      }
     }
   ],
   "categories": [
     "חתונות",
-    "בריתות",
-    "בר/בת מצווה",
-    "אירועים"
+    "ברית / בריתה",
+    "בר / בת מצווה",
+    "אירוסין / חינה",
+    "עלייה לתורה"
   ],
   "contact": {
     "phone_display": "052-308-4940",
@@ -127,15 +128,15 @@
     }
   ],
   "theme": {
-    "bodyFont": "Arial",
-    "headingFont": "Georgia",
+    "bodyFont": "Heebo",
+    "headingFont": "Frank Ruhl Libre",
     "textColor": "#f6f1e7",
     "mutedColor": "#bdb5a7",
-    "goldColor": "#d6ad55",
-    "backgroundColor": "#080808",
-    "panelColor": "#111111",
-    "buttonRadius": 12,
-    "sectionSpacing": 72,
+    "goldColor": "#d9ad4a",
+    "backgroundColor": "#050505",
+    "panelColor": "#0d0c0a",
+    "buttonRadius": 999,
+    "sectionSpacing": 88,
     "buttonBg": "#d6ad55",
     "buttonText": "#111111",
     "buttonBorder": "#d6ad55",
@@ -145,20 +146,20 @@
   },
   "typography": {
     "heroWhite": {
-      "font": "Gveret Levin AlefAlefAlef",
-      "size": 70,
+      "font": "Gveret Levin",
+      "size": 88,
       "weight": 400,
       "color": "#ffffff",
       "letterSpacing": 0,
-      "lineHeight": 1.05
+      "lineHeight": 1.0
     },
     "heroGold": {
-      "font": "Gveret Levin AlefAlefAlef",
-      "size": 76,
+      "font": "Gveret Levin",
+      "size": 94,
       "weight": 400,
-      "color": "#d6ad55",
+      "color": "#f0d285",
       "letterSpacing": 0,
-      "lineHeight": 1.05
+      "lineHeight": 1.0
     },
     "body": {
       "font": "Arial",
@@ -202,9 +203,9 @@
   },
   "seo": {
     "home": {
-      "title": "Haim Netanel Photography | צלם אירועים בנתיבות והדרום",
-      "description": "צילום חתונות, בריתות, בר ובת מצווה ואירועים בנתיבות, באר שבע והדרום.",
-      "ogImage": "/assets/hero.jpg"
+      "title": "Haim Netanel Photography | צילום אירועים ושמחות",
+      "description": "צילום בריתות, בר ובת מצווה, עלייה לתורה, חינות וחתונות. צילום מקצועי, מכבד ורגיש למשפחה ולמסורת.",
+      "ogImage": "/assets/story-ring.webp"
     },
     "gallery": {
       "title": "גלריית צילום אירועים | Haim Netanel Photography",
