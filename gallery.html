@@ -14,13 +14,74 @@
 <div class="links"><a href="index.html" class="">דף הבית</a><a href="gallery.html" class="active">גלריה</a><a href="about.html" class="">אודות</a><a href="services.html" class="">שירותים</a><a href="areas.html" class="">אזורי שירות</a><a href="reviews.html" class="">המלצות</a><a href="contact.html" class="">יצירת קשר</a></div>
 <a class="nav-cta" href="contact.html">בדיקת זמינות</a>
 <button class="menu-btn" aria-label="פתיחת תפריט" aria-expanded="false">☰</button>
-</nav></div></header><main><section class="page-hero"><div class="wrap"><h1>גלריה</h1><p>טעימה מעבודות וסיפורים מצולמים — רגעי טקס, משפחה ואווירה.</p></div></section><section><div class="wrap"><div class="gallery-grid">
-<div class="gallery-item" id="weddings"><img loading="lazy" src="assets/story-ring.webp" alt="רגע נתינת הטבעת בחתונה"><span class="label">חתונה · טבעת</span></div>
-<div class="gallery-item"><img loading="lazy" src="assets/story-ketubah.webp" alt="חתימה על הכתובה"><span class="label">חתונה · כתובה</span></div>
-<div class="gallery-item"><img loading="lazy" src="assets/story-chuppah.webp" alt="חופה מעוצבת"><span class="label">חתונה · חופה</span></div>
-<div class="gallery-item" id="brit"><img loading="lazy" src="assets/brit.webp" alt="צילום ברית"><span class="label">ברית / בריתה</span></div>
-<div class="gallery-item" id="bar"><img loading="lazy" src="assets/bar.webp" alt="צילום בר מצווה"><span class="label">בר / בת מצווה</span></div>
-<div class="gallery-item" id="engagement"><img loading="lazy" src="assets/events.webp" alt="צילום אירוע משפחתי"><span class="label">אירוסין / חינה</span></div>
-</div><div class="notice" style="margin-top:24px">הגלריה תמשיך להתעדכן בעבודות חדשות ובתמונות שקיבלו אישור לפרסום.</div></div></section></main><a class="floating-wa" href="tel:+972523084940" aria-label="חיוג לחיים נתנאל">☎</a>
+</nav></div></header><main>
+<section class="page-hero gallery-hero"><div class="wrap">
+  <span class="eyebrow">PORTFOLIO · תיק עבודות</span>
+  <h1>הגלריה שלי</h1>
+  <p>שמחות יהודיות ומשפחתיות, מצולמות ברגישות ובכבוד — בריתות, בר/בת מצווה, חינה ואירוסין וחתונות.</p>
+</div></section>
+
+<section class="gallery-experience"><div class="wrap-wide">
+  <div class="gallery-category-grid" role="tablist" aria-label="קטגוריות גלריה">
+    <button class="gallery-category active" type="button" data-gallery-cat="weddings" aria-selected="true">
+      <img src="assets/story-chuppah.webp" alt="חופה מעוצבת" loading="eager">
+      <span class="gallery-category-shade"></span><span class="gallery-category-icon">♢</span><strong>חתונות</strong><small>חופה · כתובה · טבעת · אווירה</small>
+    </button>
+    <button class="gallery-category" type="button" data-gallery-cat="bar" aria-selected="false">
+      <img src="assets/bar.webp" alt="בר ובת מצווה" loading="lazy">
+      <span class="gallery-category-shade"></span><span class="gallery-category-icon">✦</span><strong>בר / בת מצווה</strong><small>עלייה לתורה · משפחה · האירוע</small>
+    </button>
+    <button class="gallery-category" type="button" data-gallery-cat="brit" aria-selected="false">
+      <img src="assets/brit.webp" alt="ברית ובריתה" loading="lazy">
+      <span class="gallery-category-shade"></span><span class="gallery-category-icon">◉</span><strong>ברית / בריתה</strong><small>טקס · משפחה · אווירה</small>
+    </button>
+    <button class="gallery-category" type="button" data-gallery-cat="engagement" aria-selected="false">
+      <img src="assets/events.webp" alt="חינה ואירוסין" loading="lazy">
+      <span class="gallery-category-shade"></span><span class="gallery-category-icon">◇</span><strong>חינה / אירוסין</strong><small>טקס · עיצוב · שמחה</small>
+    </button>
+  </div>
+
+  <div class="gallery-toolbar">
+    <div>
+      <span class="eyebrow" id="galleryEyebrow">WEDDINGS</span>
+      <h2 id="galleryTitle">חתונות</h2>
+    </div>
+    <div class="gallery-subfilters" id="gallerySubfilters" aria-label="סינון תמונות חתונה">
+      <button class="active" type="button" data-sub="all">הכול</button>
+      <button type="button" data-sub="chuppah">חופה</button>
+      <button type="button" data-sub="ketubah">כתובה</button>
+      <button type="button" data-sub="ring">טבעת</button>
+      <button type="button" data-sub="atmosphere">אווירה</button>
+    </div>
+  </div>
+
+  <div class="portfolio-masonry" id="portfolioMasonry">
+    <button class="portfolio-shot tall" type="button" data-cat="weddings" data-sub="ring" data-full="assets/story-ring.webp"><img src="assets/story-ring.webp" alt="רגע נתינת הטבעת" loading="lazy"><span>רגעים קטנים</span></button>
+    <button class="portfolio-shot wide" type="button" data-cat="weddings" data-sub="chuppah atmosphere" data-full="assets/story-chuppah.webp"><img src="assets/story-chuppah.webp" alt="חופה מעוצבת" loading="lazy"><span>לפני החופה</span></button>
+    <button class="portfolio-shot" type="button" data-cat="weddings" data-sub="ketubah" data-full="assets/story-ketubah.webp"><img src="assets/story-ketubah.webp" alt="חתימה על הכתובה" loading="lazy"><span>הכתובה</span></button>
+    <button class="portfolio-shot" type="button" data-cat="weddings" data-sub="chuppah" data-full="assets/hmy-chuppah.jpg"><img src="assets/hmy-chuppah.jpg" alt="חופה באירוע" loading="lazy"><span>החופה</span></button>
+    <button class="portfolio-shot wide" type="button" data-cat="bar" data-sub="torah family event" data-full="assets/bar.webp"><img src="assets/bar.webp" alt="צילום בר מצווה" loading="lazy"><span>בר / בת מצווה</span></button>
+    <button class="portfolio-shot tall" type="button" data-cat="brit" data-sub="ceremony family atmosphere" data-full="assets/brit.webp"><img src="assets/brit.webp" alt="צילום ברית" loading="lazy"><span>ברית / בריתה</span></button>
+    <button class="portfolio-shot wide" type="button" data-cat="engagement" data-sub="ceremony decor atmosphere" data-full="assets/events.webp"><img src="assets/events.webp" alt="צילום חינה ואירוסין" loading="lazy"><span>חינה / אירוסין</span></button>
+  </div>
+
+  <div class="gallery-empty" id="galleryEmpty" hidden>
+    <strong>התיק הזה בבנייה.</strong>
+    <span>נוסיף לכאן עבודות מאושרות לפרסום. בינתיים אפשר לראות קטגוריה אחרת.</span>
+  </div>
+
+  <div class="gallery-cta">
+    <div><span class="eyebrow">READY WHEN YOU ARE</span><h2>אהבתם את הסגנון?</h2><p>ספרו לי על השמחה שלכם ואבדוק אם התאריך פנוי.</p></div>
+    <a class="btn btn-gold" href="contact.html">בדיקת זמינות</a>
+  </div>
+</div></section>
+
+<div class="lightbox" id="galleryLightbox" hidden aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="סגירה">×</button>
+  <button class="lightbox-nav prev" type="button" aria-label="תמונה קודמת">‹</button>
+  <figure><img id="lightboxImage" src="" alt=""><figcaption id="lightboxCaption"></figcaption></figure>
+  <button class="lightbox-nav next" type="button" aria-label="תמונה הבאה">›</button>
+</div>
+</main><a class="floating-wa" href="tel:+972523084940" aria-label="חיוג לחיים נתנאל">☎</a>
 <footer><div class="wrap foot"><strong>HN · HAIM NETANEL PHOTOGRAPHY</strong><span>© 2026 כל הזכויות שמורות</span><div class="foot-links"><a href="contact.html">יצירת קשר</a><a href="https://www.google.com/search?q=Haim+Netanel+Photography" target="_blank" rel="noopener">Google Business</a><a href="privacy.html">פרטיות</a><a href="terms.html">תנאי שימוש</a></div></div></footer><script src="script.js" defer></script><script src="cms.js" defer></script>
 </body></html>
