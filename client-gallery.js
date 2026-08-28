@@ -133,7 +133,7 @@ function updateLightbox() {
   const p = photos[lightboxIndex];
   if (!p) return;
   const img = $('#cgLbImage');
-  img.src = p.image_url;
+  img.src = p.full_url || p.image_url;
   img.alt = p.filename || 'תמונה מהאירוע';
   $('#cgLbFilename').textContent = p.filename || '';
   $('#cgLbCount').textContent = `${lightboxIndex + 1} / ${photos.length}`;
@@ -183,7 +183,7 @@ function preloadAdjacent() {
   [-1, 1].forEach((delta) => {
     const idx = (lightboxIndex + delta + photos.length) % photos.length;
     const image = new Image();
-    image.src = photos[idx].image_url;
+    image.src = photos[idx].full_url || photos[idx].image_url;
   });
 }
 

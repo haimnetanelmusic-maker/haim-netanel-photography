@@ -50,22 +50,24 @@
       </div>
 
       <section class="client-card">
-        <div class="section-head"><div><h2>האירועים שלי</h2><p>בחר אירוע כדי להעלות תמונות או לקבל את בחירת הלקוח.</p></div><button id="refreshEventsBtn" class="ghost-btn">רענון</button></div>
+        <div class="section-head"><div><h2>האירועים שלי</h2><p>בחר אירוע כדי להעלות תמונות, לשלוח קישור או לקבל את בחירת הלקוח.</p></div><div class="head-actions"><input id="eventSearch" class="event-search" type="search" placeholder="חיפוש לקוח / אירוע"><select id="eventStatusFilter" class="event-filter"><option value="all">כל הסטטוסים</option><option value="active">פעיל</option><option value="submitted">הוגש</option><option value="archived">ארכיון</option></select><button id="refreshEventsBtn" class="ghost-btn">רענון</button></div></div>
         <div id="eventsList" class="event-list"></div>
       </section>
 
       <section id="eventWorkspace" class="client-card" hidden>
         <div class="workspace-head">
           <div><div class="eyebrow">אירוע נבחר</div><h2 id="workspaceTitle">—</h2><p id="workspaceMeta"></p></div>
-          <div class="head-actions"><button id="copyClientLinkBtn" class="ghost-btn">העתקת קישור ללקוח</button><button id="regenerateLinkBtn" class="ghost-btn">קישור חדש</button></div>
+          <div class="head-actions"><button id="copyClientLinkBtn" class="ghost-btn">העתקת קישור ללקוח</button><button id="regenerateLinkBtn" class="ghost-btn">קישור חדש</button><button id="archiveEventBtn" class="ghost-btn">העבר לארכיון</button><button id="deleteEventBtn" class="danger-btn">מחיקת אירוע</button></div>
         </div>
         <div id="clientLinkBox" class="link-box" hidden><input id="clientLink" readonly dir="ltr"><button id="copyLinkInsideBtn" class="primary-btn">העתקה</button></div>
 
         <div class="workspace-grid">
-          <div class="workspace-panel">
+          <div class="workspace-panel upload-panel">
             <h3>העלאת תמונות</h3>
-            <p>בחר JPG/WEBP. המערכת מעלה מקור + Preview מוקטן אוטומטית.</p>
-            <input id="eventFiles" type="file" accept="image/jpeg,image/webp" multiple>
+            <p>גרור לכאן JPG / WEBP או לחץ לבחירה. לכל מקור נוצר Preview קל ומהיר אוטומטית.</p>
+            <label id="dropZone" class="drop-zone" for="eventFiles"><span class="drop-icon">⇧</span><strong>גרור תמונות לכאן</strong><small>או לחץ לבחירת קבצים · עד 25MB לתמונה</small></label>
+            <input id="eventFiles" class="sr-file" type="file" accept="image/jpeg,image/webp" multiple>
+            <div id="fileQueue" class="file-queue" hidden></div>
             <button id="uploadEventFilesBtn" class="primary-btn">העלאת התמונות</button>
             <div id="uploadProgress" class="progress-wrap" hidden><div class="progress-track"><i id="uploadBar"></i></div><span id="uploadText"></span></div>
           </div>
@@ -73,7 +75,7 @@
             <h3>בחירת הלקוח</h3>
             <div class="selection-summary"><b id="selectedCount">0</b><span>תמונות נבחרו</span></div>
             <div id="selectionStatus" class="status-pill">טרם הוגש</div>
-            <button id="downloadSelectedBtn" class="primary-btn">הורדת הנבחרות</button>
+            <button id="downloadSelectedBtn" class="primary-btn">הורדת הנבחרות כ‑ZIP</button><small id="downloadHint" class="download-hint">ההורדה כוללת את קבצי המקור שנבחרו.</small>
           </div>
         </div>
         <div id="adminPhotos" class="admin-photo-grid"></div>
