@@ -29,3 +29,15 @@ body{min-height:100vh;background:radial-gradient(circle at 85% 0,#241b0b 0,trans
 @media(max-width:1450px){#section-design .design-studio{grid-template-columns:minmax(480px,.9fr) minmax(600px,1.1fr)}#section-design .preview-frame-wrap{height:720px}}
 @media(max-width:1180px){.content:has(#section-design.active){max-width:1400px}#section-design .design-studio{grid-template-columns:1fr}#section-design .live-preview-panel{position:relative;top:auto}#section-design .preview-frame-wrap{height:680px}.font-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.font-lab-toolbar{grid-template-columns:1fr}.font-showcase{grid-template-columns:1fr;max-height:360px}#section-design .preview-frame-wrap{height:560px}}
+
+/* V17.1 typography: admin remains clear and consistent with the public site. */
+html,body,button,input,textarea,select,.panel,.card,.modal,.sidebar,.topbar {
+  font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif;
+}
+h1,h2,h3,h4,h5,h6,.panel-title,.modal-title {
+  font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif !important;
+  font-weight:700;
+  letter-spacing:-.025em;
+}
+/* Logo lockup is intentionally preserved. */
+.brand-mark{font-family:Georgia,serif}

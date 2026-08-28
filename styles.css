@@ -110,3 +110,48 @@ label{font-size:13px;font-weight:500;color:#ded6ca}.foot,.foot-links,footer{font
 @media(max-width:620px){
   body{font-size:15px;line-height:1.78}.wrap{width:min(var(--max),calc(100% - 30px))}.site-nav,header nav{min-height:76px;padding-inline:14px}.menu-btn{width:44px;height:44px}.section-intro p{font-size:15px}.section-intro h2{letter-spacing:-.012em}.btn{font-size:14px}.page-hero{padding-top:64px}
 }
+
+/* V17.1 typography polish — clean premium Hebrew sans, inspired by the user's reference.
+   The handwritten home hero sentence and logo/brand typography are intentionally preserved. */
+body,
+button,input,select,textarea,
+.links a,.btn,.header-cta,.nav-cta,
+.eyebrow,
+.section-intro p,
+.story-card span b,.story-card span small,
+.trust-grid b,.trust-grid h3,.trust-grid p,
+.about-editorial-copy h2,.about-editorial-copy p,.about-editorial-copy blockquote,
+.clean-process b,.clean-process h3,.clean-process p,
+.home-review p,.home-review strong,
+.final-cta h2,.final-cta p,
+.page-hero h1,.page-hero p,
+.content-section h1,.content-section h2,.content-section h3,.content-section p,
+.service-card h2,.service-card h3,.service-card p,
+.review-card h2,.review-card h3,.review-card p,
+.contact-card h1,.contact-card h2,.contact-card h3,.contact-card p,
+.footer-grid,.site-footer {
+  font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+.section-intro h2,.page-hero h1,
+.story-card span b,.trust-grid b,
+.about-editorial-copy h2,.about-editorial-copy blockquote,
+.clean-process b,.home-review p,.final-cta h2 {
+  font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif !important;
+  letter-spacing:-.035em;
+}
+
+h1,.page-hero h1,.section-intro h2,.about-editorial-copy h2 {font-weight:700}
+h2,h3,h4,.story-card span b,.trust-grid b,.clean-process b,.final-cta h2 {font-weight:650}
+
+/* Preserve the one approved handwritten hero line exactly as-is. */
+.hero-white,.hero-gold {
+  font-family:'Gveret Levin','Noto Sans Hebrew',sans-serif !important;
+  font-weight:700 !important;
+  letter-spacing:.01em !important;
+}
+
+/* Preserve logo/brand treatment. */
+.brand-mark,.brand,.brand span,.brand-hn,.brand-name,.brand-sub {font-family:inherit}
+.brand span,.brand-hn,.brand-name {font-family:'Noto Serif Hebrew',serif}
