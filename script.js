@@ -2,8 +2,8 @@
 'use strict';
 const btn=document.querySelector('.menu-btn');const links=document.querySelector('.links');
 if(btn&&links){
-  const closeMenu=()=>{links.classList.remove('open');document.body.classList.remove('mobile-nav-open');btn.setAttribute('aria-expanded','false')};
-  const openMenu=()=>{links.classList.add('open');document.body.classList.add('mobile-nav-open');btn.setAttribute('aria-expanded','true')};
+  const closeMenu=()=>{links.classList.remove('open');document.body.classList.remove('mobile-nav-open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','פתיחת תפריט')};
+  const openMenu=()=>{links.classList.add('open');document.body.classList.add('mobile-nav-open');btn.setAttribute('aria-expanded','true');btn.setAttribute('aria-label','סגירת תפריט')};
   btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();links.classList.contains('open')?closeMenu():openMenu()});
   links.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu()});
   document.addEventListener('click',e=>{if(links.classList.contains('open')&&!links.contains(e.target)&&!btn.contains(e.target))closeMenu()});
