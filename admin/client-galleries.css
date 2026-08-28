@@ -9,3 +9,7 @@
   font-weight:700;
   letter-spacing:-.03em;
 }
+
+
+/* V17.2 unified Hebrew typography */
+html,body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,p,label,small,a{font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif!important}

@@ -6,3 +6,8 @@
 @media(max-width:1000px){.cg-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:700px){.cg-header span{display:none}.cg-hero{align-items:flex-start;flex-direction:column}.cg-grid{grid-template-columns:repeat(2,1fr)}.cg-main{padding:22px 10px 50px}.cg-photo{border-radius:8px}.cg-lb-stage{padding:58px 8px 10px}.cg-lb-stage img{max-height:calc(100vh - 190px)}.cg-lb-nav{width:44px;height:56px;font-size:38px;background:#080808b8}.cg-lb-prev{right:7px}.cg-lb-next{left:7px}.cg-lb-close{top:9px;left:9px;width:42px;height:42px}.cg-lb-toolbar{grid-template-columns:auto 1fr;gap:7px 12px;padding:10px 10px 14px}.cg-lb-filename{grid-column:1/-1;grid-row:1;text-align:center;font-size:12px}.cg-lb-count{grid-column:1;grid-row:2}.cg-lb-actions{grid-column:2;grid-row:2;gap:5px;justify-content:flex-end;flex-wrap:wrap}.cg-lb-action{padding:8px 10px}.cg-lb-select{padding:8px 12px;font-size:13px}.cg-lb-zoom-label{display:none}}
 @media(prefers-reduced-motion:reduce){.cg-photo img,.cg-lb-stage img{transition:none}}
+
+
+/* V17.2 unified Hebrew typography */
+html,body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,p,label,small,a{font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif!important}
+.cg-header img{font-family:initial!important}

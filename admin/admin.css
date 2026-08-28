@@ -41,3 +41,7 @@ h1,h2,h3,h4,h5,h6,.panel-title,.modal-title {
 }
 /* Logo lockup is intentionally preserved. */
 .brand-mark{font-family:Georgia,serif}
+
+
+/* V17.2 unified Hebrew typography */
+html,body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,p,label,small,a{font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif!important}
