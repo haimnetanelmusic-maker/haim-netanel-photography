@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#080808">
+  <title>HN Studio · גלריות לקוחות</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="client-galleries.css">
+</head>
+<body class="client-admin-page">
+  <header class="client-topbar">
+    <a href="./" class="ghost-btn">← חזרה לניהול האתר</a>
+    <div class="client-brand"><b>HN</b><span>CLIENT GALLERIES · V17</span></div>
+    <button id="signOutBtn" class="ghost-btn" hidden>התנתקות</button>
+  </header>
+
+  <main class="client-shell">
+    <section id="setupCard" class="client-card setup-card" hidden>
+      <div class="eyebrow">הגדרה חד-פעמית</div>
+      <h1>חיבור מערכת הלקוחות ל‑Supabase</h1>
+      <p>הדבק כאן רק את ה‑Publishable key / anon key של הפרויקט. זה אינו Service Role ואסור להדביק כאן מפתח סודי.</p>
+      <div class="field"><label>Publishable key</label><input id="publishableKey" dir="ltr" autocomplete="off" placeholder="sb_publishable_… / eyJ…"></div>
+      <button id="saveKeyBtn" class="primary-btn">שמירה והמשך</button>
+    </section>
+
+    <section id="loginCard" class="client-card login-card-v17" hidden>
+      <div class="eyebrow">כניסת מנהל</div>
+      <h1>גלריות לקוחות</h1>
+      <p>התחבר עם המשתמש שיצרת ב‑Supabase Authentication.</p>
+      <div class="form-grid one-col">
+        <div class="field"><label>אימייל</label><input id="adminEmail" type="email" dir="ltr" autocomplete="username"></div>
+        <div class="field"><label>סיסמה</label><input id="adminPassword" type="password" dir="ltr" autocomplete="current-password"></div>
+      </div>
+      <button id="loginV17Btn" class="primary-btn">כניסה מאובטחת</button>
+      <div id="loginMessage" class="v17-message"></div>
+    </section>
+
+    <section id="clientApp" hidden>
+      <div class="v17-hero">
+        <div><div class="eyebrow">HN Studio</div><h1>גלריות לקוחות</h1><p>אירועים, העלאת תמונות, קישורים פרטיים ובחירות לקוח.</p></div>
+        <button id="newEventBtn" class="primary-btn">+ אירוע חדש</button>
+      </div>
+
+      <div class="v17-stats">
+        <div class="v17-stat"><b id="eventsCount">0</b><span>אירועים</span></div>
+        <div class="v17-stat"><b id="photosCount">0</b><span>תמונות</span></div>
+        <div class="v17-stat"><b id="submittedCount">0</b><span>בחירות שהוגשו</span></div>
+      </div>
+
+      <section class="client-card">
+        <div class="section-head"><div><h2>האירועים שלי</h2><p>בחר אירוע כדי להעלות תמונות או לקבל את בחירת הלקוח.</p></div><button id="refreshEventsBtn" class="ghost-btn">רענון</button></div>
+        <div id="eventsList" class="event-list"></div>
+      </section>
+
+      <section id="eventWorkspace" class="client-card" hidden>
+        <div class="workspace-head">
+          <div><div class="eyebrow">אירוע נבחר</div><h2 id="workspaceTitle">—</h2><p id="workspaceMeta"></p></div>
+          <div class="head-actions"><button id="copyClientLinkBtn" class="ghost-btn">העתקת קישור ללקוח</button><button id="regenerateLinkBtn" class="ghost-btn">קישור חדש</button></div>
+        </div>
+        <div id="clientLinkBox" class="link-box" hidden><input id="clientLink" readonly dir="ltr"><button id="copyLinkInsideBtn" class="primary-btn">העתקה</button></div>
+
+        <div class="workspace-grid">
+          <div class="workspace-panel">
+            <h3>העלאת תמונות</h3>
+            <p>בחר JPG/WEBP. המערכת מעלה מקור + Preview מוקטן אוטומטית.</p>
+            <input id="eventFiles" type="file" accept="image/jpeg,image/webp" multiple>
+            <button id="uploadEventFilesBtn" class="primary-btn">העלאת התמונות</button>
+            <div id="uploadProgress" class="progress-wrap" hidden><div class="progress-track"><i id="uploadBar"></i></div><span id="uploadText"></span></div>
+          </div>
+          <div class="workspace-panel">
+            <h3>בחירת הלקוח</h3>
+            <div class="selection-summary"><b id="selectedCount">0</b><span>תמונות נבחרו</span></div>
+            <div id="selectionStatus" class="status-pill">טרם הוגש</div>
+            <button id="downloadSelectedBtn" class="primary-btn">הורדת הנבחרות</button>
+          </div>
+        </div>
+        <div id="adminPhotos" class="admin-photo-grid"></div>
+      </section>
+    </section>
+  </main>
+
+  <div id="eventModal" class="modal"><div class="modal-card small"><button id="closeEventModal" class="modal-close">×</button><h2>אירוע חדש</h2><div class="form-grid one-col">
+    <div class="field"><label>שם האירוע</label><input id="eventTitle" placeholder="לדוגמה: בר המצווה של יונתן"></div>
+    <div class="field"><label>שם הלקוח</label><input id="eventClient"></div>
+    <div class="field"><label>אימייל לקוח</label><input id="eventEmail" type="email" dir="ltr"></div>
+    <div class="field"><label>טלפון</label><input id="eventPhone" dir="ltr"></div>
+    <div class="field"><label>סוג אירוע</label><select id="eventType"><option>חתונה</option><option>בר / בת מצווה</option><option>ברית / בריתה</option><option>אירוסין / חינה</option><option>עלייה לתורה</option><option>אחר</option></select></div>
+    <div class="field"><label>תאריך</label><input id="eventDate" type="date"></div>
+    <div class="field"><label>מקסימום בחירות (ריק = ללא הגבלה)</label><input id="eventMax" type="number" min="1"></div>
+  </div><button id="createEventBtn" class="primary-btn">יצירת אירוע וקישור פרטי</button></div></div>
+
+  <div id="v17Toast" class="toast"></div>
+  <script src="../supabase-config.js"></script>
+  <script type="module" src="client-galleries.js"></script>
+</body>
+</html>

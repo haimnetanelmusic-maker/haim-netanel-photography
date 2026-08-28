@@ -24,8 +24,8 @@ collections:
             widget: "object"
             collapsed: false
             fields:
-              - { label: "כותרת לבנה", name: "title_white", widget: "string" }
-              - { label: "כותרת זהב", name: "title_gold", widget: "string" }
+              - { label: "כותרת לבנה (כותרת מותג – לא לשנות)", name: "title_white", widget: "string" }
+              - { label: "כותרת זהב (כותרת מותג – לא לשנות)", name: "title_gold", widget: "string" }
               - { label: "טקסט פתיחה", name: "description", widget: "text" }
               - { label: "תמונת פתיחה", name: "image", widget: "image", choose_url: false }
           - label: "אודות בדף הבית"
@@ -46,6 +46,16 @@ collections:
               - { label: "כותרת", name: "title", widget: "string" }
               - { label: "תמונה", name: "image", widget: "image", choose_url: false }
               - { label: "תיאור לתמונה", name: "alt", widget: "string", required: false }
+          - label: "כרטיסי אירועים בדף הבית"
+            name: "services"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "שם האירוע", name: "title", widget: "string" }
+              - { label: "שורת משנה", name: "subtitle", widget: "string" }
+              - { label: "תמונת הכרטיס", name: "image", widget: "image", choose_url: false }
+              - { label: "קישור", name: "href", widget: "string", default: "gallery.html" }
           - label: "פרטי קשר"
             name: "contact"
             widget: "object"

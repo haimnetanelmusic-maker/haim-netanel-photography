@@ -112,19 +112,27 @@
   "services": [
     {
       "title": "ברית/ה",
-      "subtitle": "רגעים ראשונים של משפחה"
+      "subtitle": "רגעים ראשונים של משפחה",
+      "image": "/assets/brit.webp",
+      "href": "gallery.html#brit"
     },
     {
       "title": "בר/ת מצווה",
-      "subtitle": "שמחה, משפחה וזיכרונות"
+      "subtitle": "שמחה, משפחה וזיכרונות",
+      "image": "/assets/bar.webp",
+      "href": "gallery.html#bar"
     },
     {
       "title": "אירוסין / חינה",
-      "subtitle": "צבע, מסורת ואהבה"
+      "subtitle": "צבע, מסורת ואהבה",
+      "image": "/assets/events.webp",
+      "href": "gallery.html#engagement"
     },
     {
       "title": "חתונה",
-      "subtitle": "היום שלכם, בדיוק כמו שהוא"
+      "subtitle": "היום שלכם, בדיוק כמו שהוא",
+      "image": "/assets/story-chuppah.webp",
+      "href": "gallery.html#weddings"
     }
   ],
   "theme": {
@@ -162,7 +170,7 @@
       "lineHeight": 1.0
     },
     "body": {
-      "font": "Arial",
+      "font": "Heebo",
       "size": 16,
       "weight": 400,
       "color": "#f6f1e7",

@@ -32,7 +32,7 @@
       <button class="nav-btn" data-section="design"><span class="nav-icon">Aa</span>עיצוב האתר</button>
       <button class="nav-btn" data-section="seo"><span class="nav-icon">⌕</span>SEO ונתונים</button>
       <button class="nav-btn" data-section="activity"><span class="nav-icon">↻</span>פעילות אחרונה</button>
-      <button class="nav-btn" data-section="future"><span class="nav-icon">◇</span>אזור לקוחות</button>
+      <button class="nav-btn" data-section="future"><span class="nav-icon">◇</span>אזור לקוחות <span class="badge live" style="position:static;margin-right:auto">V17</span></button>
     </nav>
     <div class="sidebar-bottom"><button id="quickAdd" class="primary-btn">+ הוספה מהירה</button>
       <a class="site-link" href="/" target="_blank">צפייה באתר ↗</a>
@@ -55,7 +55,7 @@
           <div class="card" data-open="services"><span class="badge live">פעיל</span><div class="card-icon">✦</div><h3>שירותים</h3><p>חתונות, בריתות, בר/בת מצווה וצילום אירועים.</p></div>
           <div class="card" data-open="contact"><span class="badge live">פעיל</span><div class="card-icon">☎</div><h3>פרטי קשר</h3><p>טלפון, WhatsApp וקישורים שמופיעים באתר.</p></div>
           <div class="card" data-open="areas"><span class="badge live">פעיל</span><div class="card-icon">⌖</div><h3>אזורי שירות</h3><p>ניהול רשימת הערים והאזורים שבהם אתה עובד.</p></div>
-          <div class="card" data-open="future"><span class="badge">תכנון עתידי</span><div class="card-icon">◇</div><h3>אזור לקוחות</h3><p>בחירת תמונות, סטטוס אלבום ובהמשך עורך אלבומים.</p></div>
+          <div class="card" data-open="future"><span class="badge live">V17 Beta</span><div class="card-icon">◇</div><h3>אזור לקוחות</h3><p>אירועים פרטיים, העלאת תמונות, בחירת לקוח והורדת הנבחרות.</p></div>
           <div class="card" data-open="future"><span class="badge">תכנון עתידי</span><div class="card-icon">⚙</div><h3>כלים מתקדמים</h3><p>עריכת תמונות, אוטומציות וכלים נוספים בעתיד.</p></div>
         </div>
         <div class="quick-stats"><div class="stat"><b id="statGallery">4</b><span>סה״כ תמונות</span></div><div class="stat"><b id="statCategories">4</b><span>קטגוריות גלריה</span></div><div class="stat"><b id="statUpdated">—</b><span>עדכון אחרון</span></div><div class="stat"><b id="statStatus">✓</b><span>סטטוס אתר</span></div></div><div class="panel activity-home"><h3 class="panel-title">↻ פעילות אחרונה</h3><div id="dashboardActivity" class="activity-list"></div></div>
@@ -146,8 +146,8 @@
       <section id="section-activity" class="section"><div class="section-head"><div><h2>פעילות אחרונה</h2><p>שינויים שבוצעו דרך HN Admin Studio.</p></div></div><div class="panel"><div id="activityList" class="activity-list"></div></div></section>
 
       <section id="section-future" class="section">
-        <div class="section-head"><div><h2>אזור לקוחות · תכנון עתידי</h2><p>הבסיס כבר נשמר במבנה הניהול, אבל המודול עצמו ייבנה בשלב נפרד.</p></div></div>
-        <div class="panel"><h3 class="panel-title">◇ החזון למערכת</h3><p class="note">בעתיד נוכל להוסיף כאן כניסה אישית לכל לקוח, גלריה פרטית, בחירת תמונות לאלבום, הערות, סטטוס עבודה ובהמשך עורך אלבומים Drag & Drop וכלי עריכת תמונות בסיסיים. זה יהיה מודול נפרד ומאובטח, ולא יעמיס על ניהול האתר הנוכחי.</p></div>
+        <div class="section-head"><div><h2>אזור לקוחות · V17</h2><p>מודול Supabase נפרד לגלריות פרטיות ובחירת תמונות.</p></div></div>
+        <div class="panel"><h3 class="panel-title">◇ גלריות לקוחות</h3><p class="note">המודול החדש שומר את תמונות הלקוחות ב‑Storage פרטי, יוצר קישור אישי לכל אירוע ושומר את בחירת הלקוח במסד הנתונים.</p><div style="margin-top:16px"><a class="primary-btn" href="client-galleries.html">פתיחת מערכת גלריות לקוחות ←</a></div></div>
       </section>
     </div>
   </main>
