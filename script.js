@@ -19,7 +19,7 @@ const leadForm=document.getElementById('leadForm');if(leadForm){const status=doc
   const title=document.getElementById('galleryTitle'),eyebrow=document.getElementById('galleryEyebrow'),empty=document.getElementById('galleryEmpty');
   const config={
     weddings:{title:'חתונות',eyebrow:'WEDDINGS',subs:[['all','הכול'],['chuppah','חופה'],['ketubah','כתובה'],['ring','טבעת'],['atmosphere','אווירה']]},
-    bar:{title:'בר / בת מצווה',eyebrow:'BAR · BAT MITZVAH',subs:[['all','הכול'],['torah','עלייה לתורה'],['family','משפחה'],['event','האירוע']]},
+    bar:{title:'בר מצווה',eyebrow:'BAR MITZVAH',subs:[['all','הכול'],['torah','עלייה לתורה'],['family','משפחה'],['event','האירוע']]},
     brit:{title:'ברית / בריתה',eyebrow:'BRIT · BABY CELEBRATION',subs:[['all','הכול'],['ceremony','הטקס'],['family','משפחה'],['atmosphere','אווירה']]},
     engagement:{title:'חינה / אירוסין',eyebrow:'HENNA · ENGAGEMENT',subs:[['all','הכול'],['ceremony','טקס'],['decor','עיצוב'],['atmosphere','שמחה']]}
   };

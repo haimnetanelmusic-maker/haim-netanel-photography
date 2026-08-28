@@ -99,7 +99,7 @@
   "categories": [
     "חתונות",
     "ברית / בריתה",
-    "בר / בת מצווה",
+    "בר מצווה",
     "אירוסין / חינה",
     "עלייה לתורה"
   ],
@@ -117,7 +117,7 @@
       "href": "gallery.html#brit"
     },
     {
-      "title": "בר/ת מצווה",
+      "title": "בר מצווה",
       "subtitle": "שמחה, משפחה וזיכרונות",
       "image": "/assets/bar.webp",
       "href": "gallery.html#bar"
@@ -212,12 +212,12 @@
   "seo": {
     "home": {
       "title": "Haim Netanel Photography | צילום אירועים ושמחות",
-      "description": "צילום בריתות, בר ובת מצווה, עלייה לתורה, חינות וחתונות. צילום מקצועי, מכבד ורגיש למשפחה ולמסורת.",
+      "description": "צילום בריתות, בר מצווה, עלייה לתורה, חינות וחתונות. צילום מקצועי, מכבד ורגיש למשפחה ולמסורת.",
       "ogImage": "/assets/story-ring.webp"
     },
     "gallery": {
       "title": "גלריית צילום אירועים | Haim Netanel Photography",
-      "description": "גלריית חתונות, בריתות, בר ובת מצווה ואירועים.",
+      "description": "גלריית חתונות, בריתות, בר מצווה ואירועים.",
       "ogImage": "/assets/wedding.jpg"
     }
   },
@@ -257,7 +257,7 @@
       "href": "services.html#weddings"
     },
     {
-      "title": "בר / בת מצווה",
+      "title": "בר מצווה",
       "text": "תיעוד משפחתי, שמח ומדויק שמחזיר אתכם לאווירה של האירוע.",
       "href": "services.html#bar"
     },
