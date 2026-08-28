@@ -381,3 +381,35 @@ main,section,.wrap,.wrap-wide,.contact-grid,.contact-grid>*,.panel{min-width:0;m
   .links{top:calc(100% - 2px)!important;left:6px!important;width:min(245px,calc(100vw - 18px))!important;max-width:245px!important;border-radius:11px!important}
   .links a{padding:9px 11px!important;font-size:13.5px!important}
 }
+
+/* V17.4.5 — home mobile menu matches the full-size inner-page menu */
+@media(max-width:980px){
+  .home-page .site-header .links{
+    top:78px!important;
+    right:10px!important;
+    left:10px!important;
+    width:auto!important;
+    max-width:none!important;
+    max-height:calc(100dvh - 90px)!important;
+    padding:10px 12px!important;
+    border-radius:14px!important;
+  }
+  .home-page .site-header .links a{
+    padding:14px 16px!important;
+    font-size:16px!important;
+    line-height:1.4!important;
+  }
+}
+@media(max-width:620px){
+  .home-page .site-header .links{
+    top:76px!important;
+    right:10px!important;
+    left:10px!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+  .home-page .site-header .links a{
+    padding:13px 14px!important;
+    font-size:15px!important;
+  }
+}
