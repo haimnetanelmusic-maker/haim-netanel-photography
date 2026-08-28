@@ -27,15 +27,25 @@ $('#loginV17Btn').onclick=async()=>{const email=$('#adminEmail').value.trim(),pa
 $('#signOutBtn').onclick=async()=>{await supabase.auth.signOut();location.reload()};
 
 async function loadEvents(){
-  const {data,error}=await supabase.from('events').select('*,photos(count),selections(id,status,submitted_at,selection_items(count))').order('created_at',{ascending:false});
-  if(error)return toast('טעינת אירועים נכשלה: '+error.message,true);
-  events=data||[];renderEvents();updateStats();
+  // Fetch selections separately. Supabase nested relation counts can be stale/empty in some RLS setups;
+  // keeping the admin summary explicit makes submitted state and selected-count reliable.
+  const [eventRes,selectionRes]=await Promise.all([
+    supabase.from('events').select('*,photos(count)').order('created_at',{ascending:false}),
+    supabase.from('selections').select('id,event_id,status,submitted_at,selection_items(photo_id)')
+  ]);
+  if(eventRes.error)return toast('טעינת אירועים נכשלה: '+eventRes.error.message,true);
+  if(selectionRes.error)return toast('טעינת בחירות נכשלה: '+selectionRes.error.message,true);
+  const selectionByEvent=new Map((selectionRes.data||[]).map(sel=>[sel.event_id,sel]));
+  events=(eventRes.data||[]).map(e=>({...e,selection:selectionByEvent.get(e.id)||null}));
+  renderEvents();updateStats();
   if(currentEvent){const fresh=events.find(e=>e.id===currentEvent.id);if(fresh){currentEvent=fresh;await selectEvent(fresh,false)}else{$('#eventWorkspace').hidden=true;currentEvent=null}}
   else{const wanted=new URLSearchParams(location.search).get('event');const e=events.find(x=>x.id===wanted);if(e)await selectEvent(e,false)}
 }
-function updateStats(){const pc=events.reduce((n,e)=>n+(e.photos?.[0]?.count||0),0),sc=events.filter(e=>e.selections?.[0]?.status==='submitted').length;$('#eventsCount').textContent=events.length;$('#photosCount').textContent=pc;$('#submittedCount').textContent=sc}
-function visibleEvents(){const q=($('#eventSearch')?.value||'').trim().toLowerCase(),f=$('#eventStatusFilter')?.value||'all';return events.filter(e=>{const sel=e.selections?.[0];const status=e.status==='archived'?'archived':sel?.status==='submitted'?'submitted':'active';const text=[e.title,e.client_name,e.event_type,e.client_email,e.client_phone].filter(Boolean).join(' ').toLowerCase();return (!q||text.includes(q))&&(f==='all'||f===status)})}
-function renderEvents(){const el=$('#eventsList'),list=visibleEvents();if(!list.length){el.innerHTML='<div class="note">לא נמצאו אירועים. אפשר ליצור אירוע חדש.</div>';return}el.innerHTML=list.map(e=>{const sel=e.selections?.[0],cnt=e.photos?.[0]?.count||0,chosen=sel?.selection_items?.[0]?.count||0,status=e.status==='archived'?'archived':sel?.status==='submitted'?'submitted':'active';const label=status==='archived'?'ארכיון':status==='submitted'?'הוגש':'פעיל';return `<button class="event-row ${currentEvent?.id===e.id?'active':''} ${status==='archived'?'archived':''}" data-id="${e.id}"><span><strong>${esc(e.title)}</strong><br><small>${esc(e.client_name||'ללא שם לקוח')}</small></span><span>${esc(e.event_type||'—')}</span><span>${fmtDate(e.event_date)}</span><span>${cnt} תמונות</span><span>${chosen} נבחרו</span><span class="event-status ${status}">${label}</span></button>`}).join('');el.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>selectEvent(events.find(e=>e.id===b.dataset.id)))}
+function eventSelection(e){return e?.selection||e?.selections?.[0]||null}
+function selectedCount(e){const sel=eventSelection(e);return Array.isArray(sel?.selection_items)?sel.selection_items.length:Number(sel?.selection_items?.[0]?.count||0)}
+function updateStats(){const pc=events.reduce((n,e)=>n+(e.photos?.[0]?.count||0),0),sc=events.filter(e=>eventSelection(e)?.status==='submitted').length;$('#eventsCount').textContent=events.length;$('#photosCount').textContent=pc;$('#submittedCount').textContent=sc}
+function visibleEvents(){const q=($('#eventSearch')?.value||'').trim().toLowerCase(),f=$('#eventStatusFilter')?.value||'all';return events.filter(e=>{const sel=eventSelection(e);const status=e.status==='archived'?'archived':sel?.status==='submitted'?'submitted':'active';const text=[e.title,e.client_name,e.event_type,e.client_email,e.client_phone].filter(Boolean).join(' ').toLowerCase();return (!q||text.includes(q))&&(f==='all'||f===status)})}
+function renderEvents(){const el=$('#eventsList'),list=visibleEvents();if(!list.length){el.innerHTML='<div class="note">לא נמצאו אירועים. אפשר ליצור אירוע חדש.</div>';return}el.innerHTML=list.map(e=>{const sel=eventSelection(e),cnt=e.photos?.[0]?.count||0,chosen=selectedCount(e),status=e.status==='archived'?'archived':sel?.status==='submitted'?'submitted':'active';const label=status==='archived'?'ארכיון':status==='submitted'?'הוגש':'פעיל';return `<button class="event-row ${currentEvent?.id===e.id?'active':''} ${status==='archived'?'archived':''}" data-id="${e.id}"><span><strong>${esc(e.title)}</strong><br><small>${esc(e.client_name||'ללא שם לקוח')}</small></span><span>${esc(e.event_type||'—')}</span><span>${fmtDate(e.event_date)}</span><span>${cnt} תמונות</span><span>${chosen} נבחרו</span><span class="event-status ${status}">${label}</span></button>`}).join('');el.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>selectEvent(events.find(e=>e.id===b.dataset.id)))}
 async function selectEvent(e,rerender=true){currentEvent=e;currentRawToken=null;if(rerender)renderEvents();$('#eventWorkspace').hidden=false;$('#workspaceTitle').textContent=e.title;$('#workspaceMeta').textContent=[e.client_name,e.event_type,fmtDate(e.event_date)].filter(Boolean).join(' · ');$('#clientLinkBox').hidden=true;$('#archiveEventBtn').textContent=e.status==='archived'?'החזרה לפעיל':'העבר לארכיון';await loadEventPhotosAndSelection()}
 $('#eventSearch').oninput=renderEvents;$('#eventStatusFilter').onchange=renderEvents;
 

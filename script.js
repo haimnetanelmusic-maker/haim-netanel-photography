@@ -1,7 +1,15 @@
 (function(){
 'use strict';
 const btn=document.querySelector('.menu-btn');const links=document.querySelector('.links');
-if(btn&&links){btn.addEventListener('click',()=>{const open=links.classList.toggle('open');btn.setAttribute('aria-expanded',String(open));});document.addEventListener('click',e=>{if(!links.contains(e.target)&&!btn.contains(e.target)&&links.classList.contains('open')){links.classList.remove('open');btn.setAttribute('aria-expanded','false');}})}
+if(btn&&links){
+  const closeMenu=()=>{links.classList.remove('open');document.body.classList.remove('mobile-nav-open');btn.setAttribute('aria-expanded','false')};
+  const openMenu=()=>{links.classList.add('open');document.body.classList.add('mobile-nav-open');btn.setAttribute('aria-expanded','true')};
+  btn.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();links.classList.contains('open')?closeMenu():openMenu()});
+  links.addEventListener('click',e=>{if(e.target.closest('a'))closeMenu()});
+  document.addEventListener('click',e=>{if(links.classList.contains('open')&&!links.contains(e.target)&&!btn.contains(e.target))closeMenu()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+  addEventListener('resize',()=>{if(innerWidth>980)closeMenu()},{passive:true});
+}
 // Netlify Identity deep links: keep auth tokens inside the CMS path.
 const hash=location.hash||'';if(/^#(?:invite_token|confirmation_token|recovery_token|access_token|error)=/i.test(hash)&&!location.pathname.includes('/admin')){location.replace('admin/'+hash);return;}
 // Hero rotation
