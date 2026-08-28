@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#080808">
   <meta name="robots" content="noindex,nofollow,noarchive">
   <title>HN Studio · מרכז ניהול</title>
-  <link rel="stylesheet" href="/admin/admin.css">
+  <link rel="stylesheet" href="admin.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
@@ -35,7 +35,7 @@
       <button class="nav-btn" data-section="future"><span class="nav-icon">◇</span>אזור לקוחות <span class="badge live" style="position:static;margin-right:auto">V17</span></button>
     </nav>
     <div class="sidebar-bottom"><button id="quickAdd" class="primary-btn">+ הוספה מהירה</button>
-      <a class="site-link" href="/" target="_blank">צפייה באתר ↗</a>
+      <a class="site-link" href="../" target="_blank">צפייה באתר ↗</a>
       <button id="logoutBtn" class="logout">התנתקות</button>
     </div>
   </aside>
@@ -130,7 +130,7 @@
             <div class="panel"><h3 class="panel-title">▤ דפים ואזורים</h3><div id="pageControls" class="page-controls"></div></div>
             <div class="panel"><h3 class="panel-title">◈ Themes</h3><div class="theme-row"><select id="themePreset"><option value="">בחר תבנית שמורה…</option></select><button id="saveThemePreset" type="button" class="ghost-btn">שמור כתבנית</button><button id="applyThemePreset" type="button" class="ghost-btn">החל</button></div></div>
           </div>
-          <div class="live-preview-panel"><div class="preview-toolbar"><b>Preview חי</b><span id="previewDeviceLabel">Desktop</span></div><div id="previewFrameWrap" class="preview-frame-wrap desktop"><iframe id="livePreview" src="/" title="תצוגה מקדימה חיה"></iframe></div></div>
+          <div class="live-preview-panel"><div class="preview-toolbar"><b>Preview חי</b><span id="previewDeviceLabel">Desktop</span></div><div id="previewFrameWrap" class="preview-frame-wrap desktop"><iframe id="livePreview" src="../" title="תצוגה מקדימה חיה"></iframe></div></div>
         </div>
         <div class="savebar"><div class="savebar-inner"><button class="primary-btn save-btn">שמור ופרסם</button><button class="ghost-btn reload-btn">בטל שינויים</button><button id="resetTheme" class="ghost-btn">חזור לברירת מחדל</button></div></div>
       </section>
@@ -156,5 +156,5 @@
 <div id="imageEditor" class="modal"><div class="modal-card"><button id="closeImageEditor" class="modal-close">×</button><h2>עריכת תמונה</h2><div class="image-editor-layout"><div class="editor-preview-wrap"><img id="editorPreview"></div><div class="editor-controls"><div class="field"><label>קטגוריה</label><select id="editCategory"></select></div><div class="field"><label>כותרת</label><input id="editTitle"></div><div class="field"><label>Alt ל‑SEO</label><input id="editAlt"></div><label class="check"><input id="editCover" type="checkbox"> תמונת Cover</label><label class="check"><input id="editFeaturedHome" type="checkbox"> ⭐ מומלצת לעמוד הבית (עד 4)</label><div class="field"><label>מסגרת</label><div class="inline"><input id="editBorderColor" type="color"><input id="editBorderWidth" type="range" min="0" max="16"></div></div><div class="field"><label>פינות</label><input id="editRadius" type="range" min="0" max="60"></div><div class="field"><label>צל</label><input id="editShadow" type="range" min="0" max="50"></div><div class="field"><label>בהירות</label><input id="editBrightness" type="range" min="50" max="150"></div><div class="field"><label>קונטרסט</label><input id="editContrast" type="range" min="50" max="150"></div><div class="field"><label>רוויה</label><input id="editSaturation" type="range" min="0" max="180"></div><div class="field"><label>שחור לבן</label><input id="editGrayscale" type="range" min="0" max="100"></div><div class="field"><label>זום</label><input id="editZoom" type="range" min="100" max="160"></div><button id="applyImageEdit" class="primary-btn">החלת השינויים</button></div></div></div></div>
 <div id="quickModal" class="modal"><div class="modal-card small"><button id="closeQuick" class="modal-close">×</button><h2>הוספה מהירה</h2><div class="quick-actions"><button data-quick="upload" class="primary-btn">העלאת תמונות</button><button data-quick="category" class="ghost-btn">קטגוריה חדשה</button><button data-quick="home" class="ghost-btn">עריכת דף הבית</button></div></div></div>
 <div id="toast" class="toast"></div>
-<script src="/admin/app.js"></script>
+<script src="app.js"></script>
 </body></html>
