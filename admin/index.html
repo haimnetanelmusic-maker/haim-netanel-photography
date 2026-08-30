@@ -22,7 +22,22 @@
       <div class="field"><label>אימייל</label><input id="loginEmail" type="email" dir="ltr" autocomplete="username"></div>
       <div class="field" style="margin-top:10px"><label>סיסמה</label><input id="loginPassword" type="password" dir="ltr" autocomplete="current-password"></div>
       <button id="loginBtn" class="primary-btn" style="margin-top:14px">כניסה מאובטחת</button>
+      <button id="forgotPasswordBtn" type="button" class="auth-link-btn">שכחתי סיסמה</button>
       <div id="loginMessage" class="v17-message" style="margin-top:10px"></div>
+    </div>
+    <div id="adminRecoveryForm" hidden>
+      <p class="auth-help">הזן את כתובת האימייל של מנהל האתר. אם החשבון קיים, יישלח אליו קישור מאובטח לאיפוס הסיסמה.</p>
+      <div class="field"><label>אימייל</label><input id="recoveryEmail" type="email" dir="ltr" autocomplete="email"></div>
+      <button id="sendRecoveryBtn" class="primary-btn" style="margin-top:14px">שליחת קישור לאיפוס</button>
+      <button id="backToLoginBtn" type="button" class="auth-link-btn">חזרה להתחברות</button>
+      <div id="recoveryMessage" class="v17-message" style="margin-top:10px"></div>
+    </div>
+    <div id="passwordResetForm" hidden>
+      <p class="auth-help">בחר סיסמה חדשה לחשבון הניהול.</p>
+      <div class="field"><label>סיסמה חדשה</label><input id="resetPassword" type="password" dir="ltr" autocomplete="new-password" minlength="10"></div>
+      <div class="field" style="margin-top:10px"><label>אימות סיסמה חדשה</label><input id="resetPasswordConfirm" type="password" dir="ltr" autocomplete="new-password" minlength="10"></div>
+      <button id="saveResetPasswordBtn" class="primary-btn" style="margin-top:14px">שמירת סיסמה חדשה</button>
+      <div id="resetPasswordMessage" class="v17-message" style="margin-top:10px"></div>
     </div>
   </div>
 </div>
@@ -44,6 +59,7 @@
     </nav>
     <div class="sidebar-bottom"><button id="quickAdd" class="primary-btn">+ הוספה מהירה</button>
       <a class="site-link" href="../" target="_blank">צפייה באתר ↗</a>
+      <button id="changePasswordBtn" type="button" class="logout">שינוי סיסמה</button>
       <button id="logoutBtn" class="logout">התנתקות</button>
     </div>
   </aside>
@@ -165,6 +181,7 @@
 <input id="hiddenFile" type="file" accept="image/*" multiple hidden>
 <div id="imageEditor" class="modal"><div class="modal-card"><button id="closeImageEditor" class="modal-close">×</button><h2>עריכת תמונה</h2><div class="image-editor-layout"><div class="editor-preview-wrap"><img id="editorPreview"></div><div class="editor-controls"><div class="field"><label>קטגוריה</label><select id="editCategory"></select></div><div class="field"><label>כותרת</label><input id="editTitle"></div><div class="field"><label>Alt ל‑SEO</label><input id="editAlt"></div><label class="check"><input id="editCover" type="checkbox"> תמונת Cover</label><label class="check"><input id="editFeaturedHome" type="checkbox"> ⭐ מומלצת לעמוד הבית (עד 4)</label><div class="field"><label>מסגרת</label><div class="inline"><input id="editBorderColor" type="color"><input id="editBorderWidth" type="range" min="0" max="16"></div></div><div class="field"><label>פינות</label><input id="editRadius" type="range" min="0" max="60"></div><div class="field"><label>צל</label><input id="editShadow" type="range" min="0" max="50"></div><div class="field"><label>בהירות</label><input id="editBrightness" type="range" min="50" max="150"></div><div class="field"><label>קונטרסט</label><input id="editContrast" type="range" min="50" max="150"></div><div class="field"><label>רוויה</label><input id="editSaturation" type="range" min="0" max="180"></div><div class="field"><label>שחור לבן</label><input id="editGrayscale" type="range" min="0" max="100"></div><div class="field"><label>זום</label><input id="editZoom" type="range" min="100" max="160"></div><button id="applyImageEdit" class="primary-btn">החלת השינויים</button></div></div></div></div>
 <div id="quickModal" class="modal"><div class="modal-card small"><button id="closeQuick" class="modal-close">×</button><h2>הוספה מהירה</h2><div class="quick-actions"><button data-quick="upload" class="primary-btn">העלאת תמונות</button><button data-quick="category" class="ghost-btn">קטגוריה חדשה</button><button data-quick="home" class="ghost-btn">עריכת דף הבית</button></div></div></div>
+<div id="changePasswordModal" class="modal"><div class="modal-card small"><button id="closeChangePassword" class="modal-close">×</button><h2>שינוי סיסמה</h2><p class="auth-help">למען האבטחה, הזן קודם את הסיסמה הנוכחית ואז בחר סיסמה חדשה.</p><div class="field"><label>סיסמה נוכחית</label><input id="currentPassword" type="password" dir="ltr" autocomplete="current-password"></div><div class="field" style="margin-top:10px"><label>סיסמה חדשה</label><input id="newPassword" type="password" dir="ltr" autocomplete="new-password" minlength="10"></div><div class="field" style="margin-top:10px"><label>אימות סיסמה חדשה</label><input id="newPasswordConfirm" type="password" dir="ltr" autocomplete="new-password" minlength="10"></div><button id="saveNewPasswordBtn" class="primary-btn" style="margin-top:14px">עדכון סיסמה</button><div id="changePasswordMessage" class="v17-message" style="margin-top:10px"></div></div></div>
 <div id="toast" class="toast"></div>
 <script src="../supabase-config.js"></script>
 <script type="module" src="app.js"></script>
