@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /content/
-Sitemap: https://haim-netanel-photography.netlify.app/sitemap.xml
+Sitemap: https://haimnetanelphoto.co.il/sitemap.xml

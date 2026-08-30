@@ -19,7 +19,9 @@ function initClient(){const key=localStorage.getItem('hn_supabase_publishable_ke
 async function boot(){if(!initClient())return;const {data:{session}}=await supabase.auth.getSession();if(session)showApp(session.user);else $('#loginCard').hidden=false}
 async function showApp(){
   $('#setupCard').hidden=true;$('#loginCard').hidden=true;$('#clientApp').hidden=false;$('#signOutBtn').hidden=false;
+  const q=new URLSearchParams(location.search),filter=q.get('filter');if(filter&&['all','active','submitted','archived'].includes(filter))$('#eventStatusFilter').value=filter;
   await loadEvents();
+  if(q.get('new')==='1')$('#eventModal').classList.add('open');
 }
 
 $('#saveKeyBtn').onclick=()=>{const k=$('#publishableKey').value.trim();if(!k)return toast('הדבק Publishable key',true);localStorage.setItem('hn_supabase_publishable_key',k);location.reload()};

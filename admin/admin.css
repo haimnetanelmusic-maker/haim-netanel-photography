@@ -45,3 +45,6 @@ h1,h2,h3,h4,h5,h6,.panel-title,.modal-title {
 
 /* V17.2 unified Hebrew typography */
 html,body,button,input,select,textarea,h1,h2,h3,h4,h5,h6,p,label,small,a{font-family:'Heebo','Noto Sans Hebrew',Arial,sans-serif!important}
+
+/* V17.6 unified admin */
+.login-card .field{text-align:right}.login-card input{width:100%;background:#0a0a0a;color:var(--text);border:1px solid #383026;border-radius:11px;padding:12px 13px;outline:none}.cards a.card{display:block;color:inherit;text-decoration:none}.v17-message{color:#ef9b9b}
