@@ -248,7 +248,7 @@ $('#cgSubmitBtn').addEventListener('click', async () => {
           'אימייל לקוח': $('#cgEmail').value.trim() || 'לא צוין',
           'הערה': $('#cgNotes').value.trim() || 'ללא הערה',
           'קישור לניהול הבחירה': adminUrl.href,
-          _subject: `בחירת תמונות חדשה - ${event.title}`, _template: 'table', _captcha: 'false'
+          _subject: `בחירת תמונות חדשה - ${event.title}`, _template: 'table', _captcha: 'true'
         })
       });
     } catch (_) {}

@@ -10,8 +10,6 @@ if(btn&&links){
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
   addEventListener('resize',()=>{if(innerWidth>980)closeMenu()},{passive:true});
 }
-// Netlify Identity deep links: keep auth tokens inside the CMS path.
-const hash=location.hash||'';if(/^#(?:invite_token|confirmation_token|recovery_token|access_token|error)=/i.test(hash)&&!location.pathname.includes('/admin')){location.replace('admin/'+hash);return;}
 // Hero rotation
 const slides=[...document.querySelectorAll('.hero-slide')];if(slides.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches){let i=Math.max(0,slides.findIndex(x=>x.classList.contains('active')));setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active')},7000)}
 // Lead form: validation + honeypot + short client cooldown. Server-side anti-abuse remains with FormSubmit/hosting provider.
