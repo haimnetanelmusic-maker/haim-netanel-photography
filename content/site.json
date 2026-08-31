@@ -17,7 +17,7 @@
       "title": "חתונה · טבעת",
       "category": "חתונות",
       "image": "/assets/story-ring.webp",
-      "alt": "רגע נתינת הטבעת בחתונה",
+      "alt": "רגע נתינת הטבעת בחתונה.",
       "cover": true,
       "featuredHome": true,
       "style": {
@@ -220,6 +220,10 @@
     "note": "חיבור נתוני מבקרים יוגדר בהמשך"
   },
   "activity": [
+    {
+      "text": "תוכן האתר עודכן דרך HN Admin Studio",
+      "time": "2026-08-31T03:38:00.403Z"
+    },
     {
       "text": "תוכן האתר עודכן דרך HN Admin Studio",
       "time": "2026-08-31T03:31:03.149Z"
