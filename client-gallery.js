@@ -239,8 +239,10 @@ $('#cgSubmitBtn').addEventListener('click', async () => {
     try {
       const adminUrl = new URL('admin/client-galleries.html', location.href);
       adminUrl.searchParams.set('event', event.id);
-      await fetch('https://formsubmit.co/ajax/haimnetanelhatzalam@gmail.com', {
-        method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      const notifyRes = await fetch('https://formsubmit.co/ajax/haimnetanelhatzalam@gmail.com', {
+        method: 'POST',
+        referrerPolicy: 'strict-origin',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
           'אירוע': event.title,
           'מספר תמונות שנבחרו': selected.size,
@@ -251,7 +253,8 @@ $('#cgSubmitBtn').addEventListener('click', async () => {
           _subject: `בחירת תמונות חדשה - ${event.title}`, _template: 'table', _captcha: 'true'
         })
       });
-    } catch (_) {}
+      if (!notifyRes.ok) console.error('Gallery submission email failed', notifyRes.status, await notifyRes.text().catch(() => ''));
+    } catch (err) { console.error('Gallery submission email failed', err); }
     $('#cgSubmitMsg').textContent = 'תודה! הבחירה התקבלה בהצלחה ✓';
     render();
   } catch (error) {
