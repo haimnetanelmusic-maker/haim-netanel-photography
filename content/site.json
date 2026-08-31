@@ -1,15 +1,9 @@
 {
   "hero": {
     "title_white": "רגעים אמיתיים.",
-    "title_gold": "זיכרונות שנשארים.",
+    "title_gold": "זיכרונות שנשארים!",
     "description": "צילום שמחות ומשפחה בגישה טבעית, מכבדת ומדויקת — מהברית והעלייה לתורה, דרך החינה ועד החופה.",
-    "image": "/assets/story-ring.webp",
-    "mode": "slideshow",
-    "slides": [
-      "/assets/story-ring.webp",
-      "/assets/story-ketubah.webp",
-      "/assets/story-chuppah.webp"
-    ]
+    "image": "/assets/story-ring.webp"
   },
   "about": {
     "title": "נעים להכיר, חיים נתנאל.",
@@ -23,7 +17,7 @@
       "title": "חתונה · טבעת",
       "category": "חתונות",
       "image": "/assets/story-ring.webp",
-      "alt": "רגע נתינת הטבעת בחתונה",
+      "alt": "רגע נתינת הטבעת בחתונה.",
       "cover": true,
       "featuredHome": true,
       "style": {
@@ -143,7 +137,7 @@
     "goldColor": "#d9ad4a",
     "backgroundColor": "#050505",
     "panelColor": "#0d0c0a",
-    "buttonRadius": 999,
+    "buttonRadius": 40,
     "sectionSpacing": 88,
     "buttonBg": "#d6ad55",
     "buttonText": "#111111",
@@ -154,20 +148,20 @@
   },
   "typography": {
     "heroWhite": {
-      "font": "Gveret Levin",
+      "font": "",
       "size": 88,
       "weight": 400,
       "color": "#ffffff",
       "letterSpacing": 0,
-      "lineHeight": 1.0
+      "lineHeight": 1
     },
     "heroGold": {
-      "font": "Gveret Levin",
+      "font": "",
       "size": 94,
       "weight": 400,
       "color": "#f0d285",
       "letterSpacing": 0,
-      "lineHeight": 1.0
+      "lineHeight": 1
     },
     "body": {
       "font": "Heebo",
@@ -225,7 +219,20 @@
     "provider": "none",
     "note": "חיבור נתוני מבקרים יוגדר בהמשך"
   },
-  "activity": [],
+  "activity": [
+    {
+      "text": "תוכן האתר עודכן דרך HN Admin Studio",
+      "time": "2026-08-31T03:38:00.403Z"
+    },
+    {
+      "text": "תוכן האתר עודכן דרך HN Admin Studio",
+      "time": "2026-08-31T03:31:03.149Z"
+    },
+    {
+      "text": "תוכן האתר עודכן דרך HN Admin Studio",
+      "time": "2026-08-31T03:30:52.453Z"
+    }
+  ],
   "reviews": [],
   "homeReviewsEnabled": true,
   "process": [
